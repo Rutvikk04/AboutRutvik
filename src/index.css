@@ -7,3 +7,8 @@
  }
 @tailwind utilities;
 
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+
