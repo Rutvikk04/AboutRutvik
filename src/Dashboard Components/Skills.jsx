@@ -10,7 +10,6 @@ const Skills = () => {
   return (
 
       <div className="h-full w-full bg-gradient-to-b from-gray-900 to-black py-10">
-      {/* bg-gradient-to-b from-gray-900 to-black */}
         {/* Skill logos */}
         <h1 className="text-xl font-medium text-sky-600  text-center ">Key Skills</h1>
         <h1 className="text-2xl font-medium text-gray-300 text-center">

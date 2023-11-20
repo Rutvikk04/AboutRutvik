@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Menu , X } from "feather-icons-react/build/IconComponents"; 
 const Navbar = () => {
   const [menuSidebar, setMenuSidebar] = useState(false);
   const menuItems = ["Home", "Projects", "Experience", "About Me"];
@@ -21,7 +21,7 @@ const Navbar = () => {
         </ul>
         <button className=" max-md:block hidden bg-black hover:border-none hover:outline-none" onClick={()=>setMenuSidebar(!menuSidebar)}>
           {
-            !menuSidebar ? <>Show</>:<>X</> //add icons Here
+            !menuSidebar ? <Menu/>:<X/> //add icons Here
           }
         </button>
       </nav>
