@@ -27,7 +27,7 @@ const Experience = () => {
 
 <div className='flex bg-gradient-to-b from-black to-transparent space-y-20 h-auto w-1/2 mx-auto my-4'>
   <div className='ml-1 w-full h-full text-white rounded-r-md p-4'>
-    <div className='flex justify-between '>
+    <div className='flex justify-between'>
     <h1>Organization: {x.org_name}</h1>
     <h1>Duration: {x.date}</h1>
     </div>

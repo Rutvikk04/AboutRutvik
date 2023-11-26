@@ -6,6 +6,7 @@ import reactLogo from "../Assets/React.png"
 import node from "../Assets/Node js.png"
 import mongodb from "../Assets/mongodb.png"
 import tailwind from  "../Assets/Tailwind.jpg"
+import git from "../Assets/git.png"
 const Skills = () => {
   const myskills=[
     {title:"HTML5",img:HTML5},
@@ -15,7 +16,7 @@ const Skills = () => {
     {title:"Node JS",img:node},
     {title:"MongoDB",img:mongodb},
     {title:"TailwindCSS",img:tailwind},
-    {title:"Github",img:tailwind},
+    {title:"Git & Github",img:git},
   ]
   return (
 
@@ -25,17 +26,17 @@ const Skills = () => {
         <h1 className="text-2xl font-medium text-gray-300 text-center">
           This Is My Playground....
         </h1>
-        <div className=" mt-4 w-fit text-white  max-md:flex-wrap max-sm:space-y-3 mx-auto flex items-center justify-around">
+        <div className=" mt-4 w-fit text-white  max-md:flex-wrap max-sm:space-y-3 mx-auto flex flex-wrap items-center justify-around">
             {
               myskills.map((x,index)=>{
                 return (
-                  <div key={index} className="w-fit h-fit flex flex-col hover:scale-105 transition-transform cursor-pointer mx-3 ">
+                  <div key={index} className=" hover:scale-105 transition-transform text-center cursor-pointer mx-3 ">
                   <img
-                  className="w-20 h-auto rounded-full mx-auto object-cover"
-                  alt="html_logo"
+                  className="w-20 h-20  rounded-full mx-auto object-center"
+                  alt="skill_logo"
                   src={x.img}
                 />
-                <span className="text-lg text-center font-medium whitespace-nowrap">{x.title}</span>
+                <span className="text-lg text-gray-300 font-medium ">{x.title}</span>
                 </div>
                 )
               })

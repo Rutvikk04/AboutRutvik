@@ -7,6 +7,10 @@ export default {
   "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+      'pacifico': [ 'Pacifico', 'cursive'] ,
+      'dm-sans':[ 'DM Sans', 'sans-serif']
+      },
       keyframes: {
         upDown: {
           "0%": { transform: "translateY(0)" },
@@ -41,9 +45,7 @@ export default {
       },
       ".backface-hidden":{
         backfaceVisibility:"hidden"
-      }   
-      
-
+      }
       }
       addUtilities(newUtilities)
     }),

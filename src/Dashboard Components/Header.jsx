@@ -8,8 +8,8 @@ const Header = () => {
       {/* INfo And Buttons Div */}
       <SocialMedia />
       <div className="infoDIv lg:w-[75%] flex flex-col justify-around h-full ">
-        <div className="flex flex-col items-center text-center justify-between h-20 overflow-hidden">
-          <div className="text-4xl space-y-4 pt-4 text-center text-white   animate-text-scroll">
+        <div className="flex flex-col items-center text-center justify-between h-16 overflow-hidden">
+          <div className="text-4xl space-y-5 pt-5 text-center text-white   animate-text-scroll">
             <h1>Hola...</h1>
             <h1>Hi..</h1>
             <h1>नमस्ते</h1>
@@ -23,10 +23,10 @@ const Header = () => {
           </div>
         </div>
         <div>
-          <h1 className="text-6xl max-md:text-5xl text-center text-white">
+          <h1 className="text-6xl font-pacifico  max-md:text-5xl text-center text-sky-500">
             I Am Rutvik..
           </h1>
-          <h1 className="text-xl max-md:text-xl text-center text-sky-400">
+          <h1 className="text-xl max-md:text-xl text-center text-white">
             MERN Stack Developer
           </h1>
         </div>
