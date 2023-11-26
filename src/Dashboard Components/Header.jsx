@@ -26,7 +26,7 @@ const Header = () => {
           <h1 className="text-6xl font-pacifico  max-md:text-5xl text-center text-sky-500">
             I Am Rutvik..
           </h1>
-          <h1 className="text-xl max-md:text-xl text-center text-white">
+          <h1 className="text-xl max-md:text-xl text-center text-gray-200">
             MERN Stack Developer
           </h1>
         </div>

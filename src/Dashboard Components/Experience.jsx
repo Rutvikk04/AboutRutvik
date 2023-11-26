@@ -40,7 +40,7 @@ const Experience = () => {
       <div className="  m-auto flex max-sm:flex-col  justify-between px-6 py-3">
         {myexp.map((x, index) => {
           return (
-            <div key={index} className="flex max-sm:w-full bg-gradient-to-b from-black to-gray-900 shadow-md shadow-sky-300 rounded-md space-y-20 h-auto w-1/2  my-4  mx-2">
+            <div key={index} className="flex max-sm:w-full bg-gradient-to-b from-black to-gray-900 shadow-md shadow-sky-300 rounded-md space-y-20 h-auto w-1/2 mb-4 mx-2">
               <div className="ml-1 w-full h-full text-white rounded-r-md p-4">
                 <h1 className="text-center text-sky-500 text-2xl">
                   {x.org_name}
