@@ -41,9 +41,9 @@ export default {
       },
       ".backface-hidden":{
         backfaceVisibility:"hidden"
-      }
+      }   
       
-      
+
       }
       addUtilities(newUtilities)
     }),

@@ -7,7 +7,7 @@ const Header = () => {
     <div className="flex justify-between bg-gradient-to-b from-black to-gray-900 h-screen py-4 ">
       {/* INfo And Buttons Div */}
       <SocialMedia />
-      <div className="infoDIv flex flex-col justify-around h-full ">
+      <div className="infoDIv lg:w-[75%] flex flex-col justify-around h-full ">
         <div className="flex flex-col items-center text-center justify-between h-20 overflow-hidden">
           <div className="text-4xl space-y-4 pt-4 text-center text-white   animate-text-scroll">
             <h1>Hola...</h1>
@@ -26,7 +26,7 @@ const Header = () => {
           <h1 className="text-6xl max-md:text-5xl text-center text-white">
             I Am Rutvik..
           </h1>
-          <h1 className="text-xl max-md:text-xl text-center text-blue-400">
+          <h1 className="text-xl max-md:text-xl text-center text-sky-400">
             MERN Stack Developer
           </h1>
         </div>
@@ -58,11 +58,9 @@ const Header = () => {
       <div className="group max-md:hidden max-lg:hidden w-1/2 flex flex-col h-full justify-center items-left ">
         <img
           src={myPhoto}
-          className=" relative  z-40  w-64 h-auto object-fill rounded-lg shadow-2xl shadow-white hover:shadow-blue-500 duration-300 ease-linear  "
+          className="myphoto  z-40  w-[22rem] h-auto object-fill rounded-full border border-sky-700 shadow-2xl shadow-sky-500 "
         />
-          <div className="max-md:hidden absolute z-20  lg:w-64 h-[28rem]  rotate-12 bg-gray-200 group-hover:bg-blue-500 group-hover:shadow-blue-400 opacity-50 shadow-md shadow-white rounded-lg duration-300 ease-linear">
-          <div className="max-md:hidden lg:w-64 h-[28rem] z-10 rotate-6 bg-gray-500 group-hover:bg-blue-200 group-hover:shadow-blue-400group-hover:bg-blue-200 group-hover:shadow-blue-400 opacity-75 shadow-md shadow-white rounded-lg duration-300 ease-linear"></div>
-        </div>
+         
       </div>
     </div>
   );
