@@ -72,7 +72,7 @@ const Projects = () => {
             return (
               <div key={index} className="w-[300px] h-[420px] mb-3 bg-transparent cursor-pointer group perspective">
                 <div className="relative group-hover:my-rotate w-full h-full duration-1000 preserve-3d">
-                  <div className="absolute shadow-md shadow-sky-600 p-3 rounded-md backface-hidden bg-gradient-to-b from-gray-600 to-gray-800 text-white border border-sky-300 w-full h-full">
+                  <div className="absolute shadow-md shadow-sky-600 p-3 rounded-md backface-hidden bg-gradient-to-b from-gray-700 to-gray-900 text-white border border-sky-300 w-full h-full">
                     <h1 className="font-bold text-sky-500 text-2xl text-center underline">
                       {x.title}
                     </h1>
@@ -99,7 +99,7 @@ const Projects = () => {
                    
                     }
                   </div>
-                  <div className="absolute shadow-md shadow-sky-600 c1 rounded-md p-2 backface-hidden my-rotate w-full h-full bg-gradient-to-b border border-sky-300  from-gray-600 to-gray-800">
+                  <div className="absolute shadow-md shadow-sky-600 c1 rounded-md p-2 backface-hidden my-rotate w-full h-full bg-gradient-to-b border border-sky-300  from-gray-700 to-gray-900">
                   <div className="text-white" dangerouslySetInnerHTML={{ __html: description }} />
                     <button className="hero-btn bg-gray-600 border border-gray-400 text-white text-sm">
                       {x.link}
