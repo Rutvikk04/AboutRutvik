@@ -37,6 +37,7 @@ const Experience = () => {
       <h1 className="text-2xl font-medium text-gray-300 text-center max-sm:text-xl">
         Pit-stops of my journey..
       </h1>
+      <div class="loader-line"></div>
       <div className="  m-auto max-w-[1440px] flex max-sm:flex-col  justify-between px-6 py-3">
         {myexp.map((x, index) => {
           return (

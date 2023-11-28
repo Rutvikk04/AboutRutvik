@@ -65,6 +65,7 @@ const Projects = () => {
           <h1 className="text-2xl font-medium text-gray-300 text-center max-sm:text-xl">
             Witness my Creativity And skills here...
           </h1>
+          <div class="loader-line"></div>
         </div>
         <div className="flex max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2">
           {myProjects?.map((x, index) => {
