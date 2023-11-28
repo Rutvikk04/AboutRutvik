@@ -62,11 +62,11 @@ const Projects = () => {
           <h1 className="text-xl font-medium text-sky-600  text-center ">
             Projects
           </h1>
-          <h1 className="text-2xl font-medium text-gray-300 text-center">
+          <h1 className="text-2xl font-medium text-gray-300 text-center max-sm:text-xl">
             Witness my Creativity And skills here...
           </h1>
         </div>
-        <div className="flex w-full justify-around flex-wrap max-md:space-y-2">
+        <div className="flex max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2">
           {myProjects?.map((x, index) => {
             let{description}=x
             return (

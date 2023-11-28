@@ -4,9 +4,10 @@ const About = () => {
   return (
     <div className="bg-gradient-to-b from-black to-gray-900 ">
       <h1 className="text-xl font-medium text-sky-600  text-center ">About</h1>
-      <h1 className="text-2xl font-medium text-gray-300 text-center">
+      <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl">
         Who am i?
       </h1>
+      
       <div className="p-5 flex max-md:flex-col justify-around  rounded-md">
         <p className="text-gray-200 w-1/2 max-md:w-full max-md:order-1 max-md:mt-2">
           Hello there, I Am Rutvik Amarcholi working as a <b>Sr.MERN Stack Developer</b> with <b>1 year</b> of experience.I
