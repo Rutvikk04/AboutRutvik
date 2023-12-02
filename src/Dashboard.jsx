@@ -4,6 +4,7 @@ import Skills from "./Dashboard Components/Skills";
 import Projects from "./Dashboard Components/Projects";
 import About from "./Dashboard Components/About";
 import Experience from "./Dashboard Components/Experience";
+import ContactME from "./Dashboard Components/ContactME";
 const Dashboard = () => {
   return (
     <>
@@ -12,6 +13,7 @@ const Dashboard = () => {
      <Projects/>
      <Experience/>
      <About/>
+   <ContactME/>
     </>
   );
 };
