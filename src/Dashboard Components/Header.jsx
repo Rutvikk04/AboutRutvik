@@ -4,7 +4,7 @@ import myPhoto from "../Assets/myphoto.jpg";
 import SocialMedia from "./SocialMedia";
 const Header = () => {
   return (
-    <div className="flex justify-between bg-gradient-to-b from-black to-gray-900 h-screen py-4 ">
+    <div id="Home" className="flex justify-between bg-gradient-to-b from-black to-gray-900 h-screen py-4 ">
       {/* INfo And Buttons Div */}
       <SocialMedia />
       <div className="infoDIv lg:w-[75%] flex flex-col justify-around h-full ">

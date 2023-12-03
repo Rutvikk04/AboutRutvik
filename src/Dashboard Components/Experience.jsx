@@ -30,7 +30,7 @@ const Experience = () => {
     },
   ];
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-black h-fit">
+    <div id="Experience" className="bg-gradient-to-b from-gray-900 to-black h-fit">
       <h1 className="text-xl font-medium text-sky-600  text-center ">
         Experience
       </h1>

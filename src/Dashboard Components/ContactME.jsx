@@ -26,7 +26,7 @@ const ContactME = () => {
     <div className="p-5 max-w-[1440px] mx-auto flex max-md:flex-col justify-between rounded-md">
     <div className="w-full md:px-12  lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
   <div className="flex w-full justify-between">
-    <h1 className="font-bold uppercase text-sky-800 text-5xl">
+    <h1 className="font-bold uppercase text-sky-500 text-5xl max-md:text-3xl">
       Send Me a <br /> message
     </h1>
  
@@ -44,7 +44,7 @@ const ContactME = () => {
     <input
       className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
       type="text"
-      name='user_name'
+      name='from_name'
       placeholder="Name*"
     />
     <input

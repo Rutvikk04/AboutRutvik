@@ -2,7 +2,7 @@ import React from "react";
 import myphoto from "../Assets/myphoto.jpg";
 const About = () => {
   return (
-    <div className="bg-gradient-to-b from-black to-gray-900 ">
+    <div id="About" className="bg-gradient-to-b from-black to-gray-900 ">
       <h1 className="text-xl font-medium text-sky-600  text-center ">About</h1>
       <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl">
         Who am i?

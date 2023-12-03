@@ -57,7 +57,7 @@ const Projects = () => {
 
   return (
 
-      <div className="h-full py-10 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5">
+      <div id="Projects" className="h-full py-10 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5">
         <div>
           <h1 className="text-xl font-medium text-sky-600  text-center ">
             Projects
