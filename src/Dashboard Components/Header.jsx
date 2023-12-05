@@ -49,6 +49,7 @@ const Header = () => {
           </a>
           <a
             className=" hero-btn cursor-pointer"
+            href="#Contact"
           >
             Contact Me
           </a>

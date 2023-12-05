@@ -17,7 +17,7 @@ const ContactME = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-black ">
+    <div id='Contact' className="bg-gradient-to-b from-gray-900 to-black ">
     <h1 className="text-xl font-medium text-sky-600  text-center ">Contact Me</h1>
     <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl">
      Your word matters!

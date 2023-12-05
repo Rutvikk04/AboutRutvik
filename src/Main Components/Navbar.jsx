@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu , X } from "feather-icons-react/build/IconComponents"; 
 const Navbar = () => {
   const [menuSidebar, setMenuSidebar] = useState(false);
-  const menuItems = ["Home", "Projects", "Experience", "About"];
+  const menuItems = ["Home", "Projects", "Experience", "About","Contact"];
   return (
     <>
       <nav className="flex fixed max-md:relative w-screen z-50 justify-between h-16 p-4 bg-black text-white ">
