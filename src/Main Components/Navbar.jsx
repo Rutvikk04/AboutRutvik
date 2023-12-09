@@ -37,6 +37,7 @@ const Navbar = () => {
                 <li
                   key={index}
                   className="text-white"
+                  onClick={()=>setMenuSidebar(false)}
                 >
                    <a href={`#${item}`} >{item}</a>
                 </li>
