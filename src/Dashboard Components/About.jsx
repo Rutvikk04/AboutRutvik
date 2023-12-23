@@ -1,8 +1,8 @@
 import React from "react";
-import myphoto from "../Assets/myphoto.jpg";
+import boyPNG from "../Assets/boy.png";
 const About = () => {
   return (
-    <div id="About" className="bg-gradient-to-b from-black to-gray-900 ">
+    <div id="About" className=" bg-gradient-to-b from-black to-gray-900 md:px-20 ">
       <h1 className="text-xl font-medium text-sky-600  text-center ">About</h1>
       <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl">
         Who am i?
@@ -32,7 +32,7 @@ const About = () => {
           music.
         </p>
         <div className="myphoto max-md:m-auto ">
-          <img className="h-96 max-md:rounded-full" src={myphoto} />
+          <img className="h-96 max-md:rounded-full" src={boyPNG} />
         </div>
       </div>
     </div>
