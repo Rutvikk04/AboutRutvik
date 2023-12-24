@@ -1,6 +1,13 @@
-import React from "react";
+import React , {useState} from "react";
 import { ArrowRight } from "feather-icons-react/build/IconComponents";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 const Experience = () => {
+  const [hoverDiv,setHoverDiv]=useState()
   const myexp = [
     {
       org_name: "Webzeel pvt.ltd",
@@ -29,8 +36,51 @@ const Experience = () => {
       ],
     },
   ];
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  //give spring like animation
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  const rotateX = useTransform(
+    mouseYSpring,
+    [-0.9, 0.9],
+    ["22.5deg", "-22.5deg"]
+  );
+  const rotateY = useTransform(
+    mouseXSpring,
+    [-0.9, 0.9],
+    ["-22.5deg", "22.5deg"]
+  );
+
+  // function for locate where out cursor is
+  const handleMouseMove = (e) => {
+    // get properties of selected div and calculations
+    const rect = e.target.getBoundingClientRect(); //to get to cursor data
+    //get height and width of our rect/our main card
+    const height = rect.height;
+    const width = rect.width;
+    //calculation to get mouse position on card as below:
+    //formula is { mousePosition - left property of rect} same as Y
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    //convert this values in percentage
+    const xpoint = mouseX / width - 0.5; //here 0.5 is for just make the calculation easy
+    const ypoint = mouseY / height - 0.5;
+    // now save xpoint and ypoint in useMotionValue hook from framer-motion library\
+    x.set(xpoint);
+    y.set(ypoint);
+  };
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
   return (
-    <div id="Experience" className="bg-gradient-to-b from-gray-900 to-black h-fit">
+    <div
+      id="Experience"
+      className="bg-gradient-to-b from-gray-900 to-black h-fit"
+    >
       <h1 className="text-xl font-medium text-sky-600  text-center ">
         Experience
       </h1>
@@ -38,11 +88,28 @@ const Experience = () => {
         Pit-stops of my journey..
       </h1>
       <div class="loader-line"></div>
-      <div className="  m-auto max-w-[1440px] flex max-sm:flex-col  justify-between px-6 py-3">
+      <div className="m-auto md:space-x-5  max-w-[1440px] flex max-sm:flex-col  justify-between px-6 py-3">
         {myexp.map((x, index) => {
           return (
-            <div key={index} className="flex max-sm:w-full bg-gradient-to-b from-black to-gray-900 shadow-md shadow-sky-300 rounded-md space-y-20 h-auto w-1/2 mb-4 mx-2">
-              <div className="ml-1 w-full h-full text-white rounded-r-md p-4">
+            <motion.div
+            onMouseEnter={()=>setHoverDiv(index)}
+              onMouseMove={(e)=>{if(hoverDiv===index)handleMouseMove(e)}}
+              onMouseLeave={(e)=>{if(hoverDiv===index)handleMouseLeave(e)}}
+              style={hoverDiv===index&&{
+                rotateY,
+                rotateX,
+                transformStyle: "preserve-3d",
+              }}
+              key={index}
+              className="relative max-md:mb-2 h-96 w-full rounded-xl bg-gradient-to-br border border-gray-600 from-gray-900 to-gray-600"
+            >
+              <div
+                style={{
+                  transform: "translateZ(75px)",
+                  transformStyle: "preserve-3d",
+                }}
+                className="absolute inset-4 grid place-content-center rounded-xl bg-gray-900 shadow-blue-500 shadow-lg"
+              >
                 <h1 className="text-center text-sky-500 text-2xl">
                   {x.org_name}
                 </h1>
@@ -51,7 +118,10 @@ const Experience = () => {
                 </h1>
                 <div className="flex flex-nowrap justify-between max-md:flex-col">
                   <h1 className="text-sky-600 font-medium">
-                    Role: <span className=" text-gray-200 whitespace-nowrap">{x.Role}</span>
+                    Role:{" "}
+                    <span className=" text-gray-200 whitespace-nowrap">
+                      {x.Role}
+                    </span>
                   </h1>
                   <h1 className="text-sky-600 font-medium">
                     Team Size: <span className=" text-gray-200">{x.team}</span>
@@ -72,7 +142,7 @@ const Experience = () => {
                   })}
                 </ul>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

@@ -1,5 +1,6 @@
 
 import Dashboard from "./Dashboard"
+import CardHoverTest from "./Main Components/CardHoverTest"
 import Navbar from "./Main Components/Navbar"
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
   <>
   <Navbar/>
   <Dashboard/>
+  <CardHoverTest/>
   </>
  )
 }
