@@ -79,7 +79,7 @@ const Skills = () => {
       <h1 className="text-xl font-medium text-sky-600  text-center ">
         Key Skills
       </h1>
-      <h1 className="text-2xl font-medium py-4 text-gray-300 text-center max-sm:text-xl">
+      <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl">
         This Is My Playground....
       </h1>
       <div className="loader-line"></div>
@@ -94,6 +94,9 @@ const Skills = () => {
           200: {
             slidesPerView: 2,
             scrollbar: false,
+          },
+          500:{
+            slidesPerView: 4,
           },
           800: {
             slidesPerView: 5,
@@ -110,7 +113,7 @@ const Skills = () => {
           return (
             <SwiperSlide
               key={index}
-              className=" transition-transform text-center cursor-pointer "
+              className=" transition-transform text-center cursor-pointer p-2"
             >
               <motion.div
               
@@ -122,7 +125,7 @@ const Skills = () => {
                   rotateX,
                   transformStyle: "preserve-3d",
                 }}
-                className="relative h-36  w-36 grid place-content-center rounded-full bg-gray-800  "
+                className="relative h-36 shadow-md shadow-blue-500 w-36 grid place-content-center rounded-full bg-gray-800  "
               >
                 <div
                   style={{

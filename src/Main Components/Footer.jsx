@@ -10,14 +10,14 @@ import pph from "../Assets/PPH.png";
 import upwork from "../Assets/upwork.png"
 const Footer = () => {
   return (
-    <div className="bg-black border-t text-white flex justify-around p-5">
-      <div className="w-1/4">
+    <div className="bg-black border-t text-white flex flex-wrap items-center justify-around p-5">
+      {/* <div className="w-1/4 max-md:full">
         <h1 className="text-2xl text-sky-500 font-pacifico ">Rutvik</h1>
         <p>
           This Portfolio site is complete made by me. All the given information
           are real and verified by me.{" "}
         </p>
-      </div>
+      </div> */}
       <div>
         <h1 className="text-lg font-semibold text-sky-500">Contact Details</h1>
         <div>
@@ -45,20 +45,20 @@ const Footer = () => {
             target="_blank"
             className="text-white hover:shadow-md rounded-full hover:shadow-sky-500 cursor-pointer p-1"
           >
-            <Github className="max-sm:h-4 max-sm:w-4 " />
+            <Github className="max-sm:h-5 max-sm:w-5 " />
           </a>
           <a
             href="https://www.linkedin.com/in/rutvik-amarcholi-4462981a3"
             target="_blank"
             className=" text-white hover:shadow-md rounded-full hover:shadow-sky-500 cursor-pointer p-1"
           >
-            <Linkedin className="max-sm:h-4 max-sm:w-4 " />
+            <Linkedin className="max-sm:h-5 max-sm:w-5 " />
           </a>
           <a
             href={"mailto:r.amarcholi@gmail.com"}
             className="hover:shadow-md rounded-full text-white hover:shadow-sky-500 cursor-pointer p-1"
           >
-            <Mail className="max-sm:h-4 max-sm:w-4 " />
+            <Mail className="max-sm:h-5 max-sm:w-5 " />
           </a>
         </div>
       </div>
