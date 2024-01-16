@@ -74,7 +74,7 @@ const Skills = () => {
     y.set(0);
   };
   return (
-    <div className="h-full w-full  bg-gradient-to-b from-gray-900 to-black py-10">
+    <div className="h-full w-full  bg-gradient-to-b from-gray-900 to-black">
       {/* Skill logos */}
       <h1 className="text-xl font-medium text-sky-600  text-center ">
         Key Skills
@@ -83,17 +83,16 @@ const Skills = () => {
         This Is My Playground....
       </h1>
       <div className="loader-line"></div>
+      <div className="m-auto md:space-x-5  max-w-[1440px]  max-sm:flex-col  justify-between px-6">
       {/* <div className=" mt-4 w-fit text-white  max-md:flex-wrap max-sm:space-y-3 mx-auto flex flex-wrap items-center justify-around max-md:grid max-md:grid-cols-4 max-sm:grid-cols-3"> */}
-      <Swiper
+     <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={50}
-        className="max-w-[1440px]  lg:translate-x-20  my-2"
-        slidesPerView={10}
+        className="px-3 py-5 w-full"
         breakpoints={{
           200: {
             slidesPerView: 2,
-            scrollbar: false,
+            scrollbar: false
           },
           500:{
             slidesPerView: 4,
@@ -101,8 +100,10 @@ const Skills = () => {
           800: {
             slidesPerView: 5,
           },
-          1000: {
-            slidesPerView: 9,
+
+          1200: {
+            slidesPerView: 8,
+            scrollbar:true
           },
         }}
         navigation
@@ -113,7 +114,7 @@ const Skills = () => {
           return (
             <SwiperSlide
               key={index}
-              className=" transition-transform text-center cursor-pointer p-2"
+              className=" transition-transform text-center cursor-pointer "
             >
               <motion.div
               
@@ -125,13 +126,13 @@ const Skills = () => {
                   rotateX,
                   transformStyle: "preserve-3d",
                 }}
-                className="relative h-36 shadow-md shadow-blue-500 w-36 grid place-content-center rounded-full bg-gray-800  "
+                className="relative h-36 lg:shadow-md shadow-blue-500 w-36 grid place-content-center rounded-full lg:bg-gray-800  "
               >
                 <div
                   style={{
                     transform: "translateZ(75px)",
                   }}
-                  className="preserve-3d  group"
+                  className="lg:preserve-3d  group "
                 >
                   <img
                     className="shadow-lg  group-hover:shadow-blue-500 preserve-3d w-20 h-20 max-sm:w-28 max-sm:h-28  rounded-full mx-auto object-center"
@@ -148,7 +149,7 @@ const Skills = () => {
         })}
       </Swiper>
     </div>
-    // </div>
+   </div>
   );
 };
 
