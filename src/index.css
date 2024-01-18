@@ -4,6 +4,9 @@
     .hero-btn{
     @apply shadow-md shadow-gray-300 text-gray-400 font-semibold p-2 rounded-md hover:bg-gray-700 hover:shadow-md hover:shadow-blue-400 hover:outline-none hover:text-blue-500 duration-300 ease-linear hover:scale-105 
    }
+   .btn-secondary{
+    @apply shadow-md shadow-blue-300 text-blue-400 font-semibold p-2 rounded-md hover:bg-white hover:shadow-md hover:shadow-gray-400 hover:outline-none hover:text-blue-500 duration-300 ease-linear hover:scale-105
+   }
    *{
     @apply font-dm-sans
    }

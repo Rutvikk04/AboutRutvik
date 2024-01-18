@@ -8,18 +8,12 @@ const Projects = () => {
       thirdParty: ["Open AI", "Razorpay", "ShipRocket", "Axios", "Redux Thunk"],
       description: `<p>
     ShopEasy.ai is an ai based e-commerce platform where user can make it's own
-    store and can easily maintain it using admin panel.           
+    store and can easily maintain it using admin panel. <br>
+    Also the store is AI based so user can generate their content like blog, product description and
+    such things using AI.          
     
-    This project has 3 modules:<br></br>
-    <b>1.Super-Admin</b>: Super-Admin is operated by team shopEasy to Handle
-    Admins(store Owners) and Users(customers)
-    <br />
-    <b>2.Admin</b>: Admin panel for admin to maintain and customize their
-    store .<br />
-    <b>3.User</b>: E-commerce WebApp of admins where customers Can buy Admin
-    services & thier goods.
   </p>`,
-      link: "ShopEasy.AI",
+      link: "http://ShopEasy.AI",
     },
     {
       title: "BMI calculator",
@@ -31,7 +25,7 @@ const Projects = () => {
     <br></br>
     
   </p>`,
-      link: "BMI Calculator",
+      link: "https://rutvikk04.github.io/BMI-Calculator-With-HTML-CSS-and-JavaScript/",
     },
     {
       title: "My Portfolio",
@@ -101,10 +95,10 @@ const Projects = () => {
                     }
                   </div>
                   <div className="absolute shadow-md shadow-sky-600 c1 rounded-md p-2 backface-hidden my-rotate w-full h-full bg-gradient-to-b border border-sky-300  from-gray-700 to-gray-900">
-                  <div className="text-white" dangerouslySetInnerHTML={{ __html: description }} />
-                    <button className="hero-btn bg-gray-600 border border-gray-400 text-white text-sm">
-                      {x.link}
-                    </button>
+                  <div className="text-white mb-2" dangerouslySetInnerHTML={{ __html: description }} />
+                    <a href={x.link} target="_blank" className="btn-secondary  text-sm">
+                      {x.title}
+                    </a>
                   </div>
                 </div>
               </div>
