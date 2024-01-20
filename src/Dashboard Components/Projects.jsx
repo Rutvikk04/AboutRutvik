@@ -56,7 +56,7 @@ const Projects = () => {
           <h1 className="text-xl font-medium text-sky-600  text-center ">
             Projects
           </h1>
-          <h1 className="text-2xl font-medium text-gray-300 text-center max-sm:text-xl">
+          <h1 className="text-2xl font-medium text-gray-300 text-center max-sm:text-xl mb-2">
             Witness my Creativity And skills here...
           </h1>
           <div class="loader-line"></div>

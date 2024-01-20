@@ -79,7 +79,7 @@ const Skills = () => {
       <h1 className="text-xl font-medium text-sky-600  text-center ">
         Key Skills
       </h1>
-      <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl">
+      <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl mb-2">
         This Is My Playground....
       </h1>
       <div className="loader-line"></div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "../Assets/Documents/Resume.pdf";
+import Resume from "../Assets/Documents/Rutvik_MERN.pdf";
 import myPhoto from "../Assets/myphoto.jpg";
 import SocialMedia from "./SocialMedia";
 const Header = () => {
