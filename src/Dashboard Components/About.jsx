@@ -1,5 +1,5 @@
 import React from "react";
-import boyPNG from "../Assets/boy.png";
+import boyPNG from "../Assets/BoyBanner.png";
 const About = () => {
   return (
     <div id="About" className=" bg-gradient-to-b pb-5 from-black to-gray-900 md:px-20 ">
@@ -9,8 +9,8 @@ const About = () => {
       </h1>
       <div class="loader-line"></div>
       <div className=" max-w-[1440px] mx-auto flex max-md:flex-col justify-around rounded-md">
-        <p className="text-gray-200 w-[70%] max-md:w-full max-md:order-1 max-md:mt-2 p-2">
-          Hello there, I Am Rutvik Amarcholi working as a <b>Sr.MERN Stack Developer</b> with <b>1 year</b> of experience.I
+        <p className="text-gray-200 w-[80%] max-md:w-full max-md:order-1 max-md:mt-2 p-2">
+          Hello there, I Am Rutvik Amarcholi working as a <b>Sr.MERN Stack Developer</b> with <b>1.5 years</b> of experience.I
           completed Many company Projects As well as freelance projects through
           out my journey as mentioned in projects section.
           <br />

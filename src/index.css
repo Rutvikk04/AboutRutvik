@@ -90,5 +90,8 @@
   background-color: blue !important  ;
 }
 
+.swiper-button-next , .swiper-button-prev{
+  display: none !important;
+}
 
 

@@ -108,7 +108,7 @@ const Experience = () => {
                   transform: "translateZ(75px)",
                   transformStyle: "preserve-3d",
                 }}
-                className="absolute inset-4 grid place-content-center rounded-xl bg-gray-900 shadow-blue-500 shadow-lg"
+                className="absolute inset-4 p-2 grid place-content-center rounded-xl bg-gray-900 shadow-blue-500 shadow-lg"
               >
                 <h1 className="text-center text-sky-500 text-2xl">
                   {x.org_name}
