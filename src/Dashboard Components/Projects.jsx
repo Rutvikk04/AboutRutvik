@@ -1,4 +1,6 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 const Projects = () => {
   const myProjects = [
     {
@@ -62,7 +64,83 @@ const Projects = () => {
           <div class="loader-line"></div>
         </div>
         <div className="flex max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2">
+        <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        className=" px-3 py-5 w-full h-full"
+        breakpoints={{
+          200: {
+            slidesPerView: 1,
+          },
+          700:{
+            slidesPerView: 2,
+          },       
+          1000:{
+            slidesPerView: 3,
+          },       
+          1300:{
+            slidesPerView: 4,
+          },       
+        }}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+      >
           {myProjects?.map((x, index) => {
+            let{description}=x
+            return (
+              <div key={index} className="w-[300px] h-[420px] mb-3 bg-transparent cursor-pointer group perspective">
+
+              <SwiperSlide
+              key={index}
+              
+              className=" transition-transform text-center cursor-pointer"
+            >
+           <div className="w-[300px] h-[420px] mb-3 bg-transparent cursor-pointer group md:perspective">
+                <div className="relative md:group-hover:my-rotate w-full h-full duration-1000 md:preserve-3d">
+                  <div className="absolute overflow-y-auto shadow-md shadow-sky-600 p-3 rounded-md backface-hidden bg-gradient-to-b from-gray-700 to-gray-900 text-white border border-sky-300 w-full h-full">
+                    <a href={x.link} className="font-bold text-sky-500 text-2xl text-center underline">
+                      {x.title}
+                    </a>
+                    <div className="lg:line-clamp-2" dangerouslySetInnerHTML={{ __html: description }} />
+                    <h1 className="font-bold text-sky-400 mt-2">
+                      Language & Frameworks:
+                    </h1>
+                    <ul className="ml-2">
+                      {x.frameworks.map((y, index) => {
+                        return <li>{y}</li>;
+                      })}
+                    </ul>
+                    {
+                      x.thirdParty?.length ?
+                      <> <h1 className="font-bold text-sky-400 mt-2">
+                      3rd Party Integrations:
+                    </h1>
+                    <ul className="ml-2">
+                    {x.thirdParty.map((z, index) => {
+                        return <li>{z}</li>;
+                      })}
+                    </ul>
+                      </>:<></>
+                   
+                    }
+                  </div>
+                  <div className="absolute shadow-md shadow-sky-600 c1 rounded-md p-2 backface-hidden my-rotate w-full h-full bg-gradient-to-b border border-sky-300  from-gray-700 to-gray-900">
+                  <div className="text-white mb-2" dangerouslySetInnerHTML={{ __html: description }} />
+                    <a href={x.link} target="_blank" className="btn-secondary  text-sm">
+                      {x.title}
+                    </a>
+                  </div>
+                </div>
+              </div>
+              </SwiperSlide>
+              </div>
+              )
+            })
+          }
+        </Swiper>
+
+          {/* {myProjects?.map((x, index) => {
             let{description}=x
             return (
               <div key={index} className="w-[300px] h-[420px] mb-3 bg-transparent cursor-pointer group perspective">
@@ -103,7 +181,7 @@ const Projects = () => {
                 </div>
               </div>
             );
-          })}
+          })} */}
         </div>
       </div>
  

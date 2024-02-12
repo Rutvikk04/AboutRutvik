@@ -33,13 +33,13 @@ const Header = () => {
 
         <p className="mx-auto max-md:px-4 md:w-1/2 text-center text-md font-semibold text-gray-400 max-sm:flex-nowrap max-sm:line-clamp-6">
           I Am Self Learned,Passionate Coder withover{" "}
-          <span className="text-white">1 years</span> of Experience.I Completed Many
+          <span className="text-white">1.5 years</span> of Experience.I Completed Many
           Freelance Project As Well As Company Project with Good Response And
           Desired Output.If you Are Seeking For A Good{" "}
           <span className="text-white">MERN Developer</span> Than Your Search Is over
           Now...
         </p>
-        <div className="flex justify-center space-x-5 my-3">
+        <div className="flex justify-center space-x-5 my-3 max-md:mx-2 max-md:text-center">
           <a
             href={Resume}
             download="Rutvik_MERN_Resume"

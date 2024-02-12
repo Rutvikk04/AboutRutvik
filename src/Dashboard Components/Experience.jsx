@@ -15,12 +15,11 @@ const Experience = () => {
       Role: "Sr.MERN Stack Developer",
       team: 8,
       responsibilities: [
-        "Handle Front-End Using React",
+        "Optimization and Development of WebApp",
         "Assign Task To juniors And Guide Them",
         "Train New Joinees",
         "Conduct Interviews For New Joinees",
         "R&D on New Features And Project Development",
-        "webApp optimization",
       ],
     },
     {

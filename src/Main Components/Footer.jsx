@@ -10,7 +10,7 @@ import pph from "../Assets/PPH.png";
 import upwork from "../Assets/upwork.png"
 const Footer = () => {
   return (
-    <div className="bg-black border-t text-white flex flex-wrap items-center justify-around p-5">
+    <div className="bg-black border-t text-white flex max-sm:flex-col flex-wrap items-center justify-around p-5">
       {/* <div className="w-1/4 max-md:full">
         <h1 className="text-2xl text-sky-500 font-pacifico ">Rutvik</h1>
         <p>
@@ -19,7 +19,7 @@ const Footer = () => {
         </p>
       </div> */}
       <div>
-        <h1 className="text-lg font-semibold text-sky-500">Contact Details</h1>
+        <h1 className="text-lg text-center font-semibold text-sky-500"> Details</h1>
         <div>
           {/* <GPS/> */}
           <span>Surat,Gujarat,India</span>
@@ -38,7 +38,7 @@ const Footer = () => {
       </div>
       <div>
         <h1 className="text-lg font-semibold text-sky-500">Social Links</h1>
-        <div className="flex justify-around">
+        <div className="flex  justify-around">
           {" "}
           <a
             href="https://github.com/Rutvikk04"

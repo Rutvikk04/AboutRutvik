@@ -43,10 +43,30 @@ const ContactME = () => {
     <div class="loader-line"></div>
     <div className="p-5 max-w-[1440px] mx-auto flex max-md:flex-col justify-between rounded-md">
     <div className="w-full md:px-12  lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
-  <div className="flex w-full justify-between">
-    <h1 className="font-bold uppercase text-sky-500 text-5xl max-md:text-3xl">
-      Send Me a <br /> message
-    </h1>
+ 
+  <form ref={form} >
+
+  <div className="grid grid-cols-1 gap-5  mt-5">
+    <input
+      className="w-full bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white focus:shadow-outline"
+      type="text"
+      name='from_name'
+      placeholder="Name*"
+    />
+    <input
+      className="w-full bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white focus:shadow-outline"
+      name='user_email'
+      placeholder="Email*"
+    />
+  </div>
+  <div className="my-4">
+    <textarea
+      placeholder="Message*"
+      name='message'
+      className="w-full bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white focus:shadow-outline"
+    />
+  </div>
+  <div className="flex w-full justify-end">
  {
   loader &&!isSent &&
     <button
@@ -76,28 +96,6 @@ const ContactME = () => {
   
    } 
 
-  </div>
-  <form ref={form} >
-
-  <div className="grid grid-cols-1 gap-5  mt-5">
-    <input
-      className="w-full bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white focus:shadow-outline"
-      type="text"
-      name='from_name'
-      placeholder="Name*"
-    />
-    <input
-      className="w-full bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white focus:shadow-outline"
-      name='user_email'
-      placeholder="Email*"
-    />
-  </div>
-  <div className="my-4">
-    <textarea
-      placeholder="Message*"
-      name='message'
-      className="w-full bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white focus:shadow-outline"
-    />
   </div>
   </form>
  
