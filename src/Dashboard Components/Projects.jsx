@@ -18,6 +18,18 @@ const Projects = () => {
       link: "http://ShopEasy.AI",
     },
     {
+      title: "MineSweeper Game",
+      organization: "Personal Project",
+      frameworks: ["React JS",  "TailwindCSS"],
+      thirdParty: [],
+      description: `<p>
+  MineSweeper is a game , Completely made with React+TailwindCSS. It is a clone of Stake diamond game.
+  It is my first game.Enjoy!!       
+    
+  </p>`,
+      link: "https://rutvikk04.github.io/minesweeper_game/",
+    },
+    {
       title: "Live ChatApp",
       organization: "Personal Project",
       frameworks: ["Node JS", "React JS", "ExpressJS", "MongoDB"],

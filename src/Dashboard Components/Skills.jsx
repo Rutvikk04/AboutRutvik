@@ -7,6 +7,7 @@ import node from "../Assets/Node js.png";
 import mongodb from "../Assets/mongodb.png";
 import tailwind from "../Assets/Tailwind.jpg";
 import git from "../Assets/git.png";
+import NextJs from "../Assets/NextJS.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";
@@ -28,6 +29,7 @@ const Skills = () => {
     { title: "CSS3", img: css3 },
     { title: "JavaScript", img: JavaScript },
     { title: "React JS", img: reactLogo },
+    { title: "Next JS", img: NextJs },
     { title: "Node JS", img: node },
     { title: "MongoDB", img: mongodb },
     { title: "TailwindCSS", img: tailwind },
