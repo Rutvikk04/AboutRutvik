@@ -1,4 +1,4 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import { ArrowRight } from "feather-icons-react/build/IconComponents";
 import {
   motion,
@@ -7,7 +7,7 @@ import {
   useTransform,
 } from "framer-motion";
 const Experience = () => {
-  const [hoverDiv,setHoverDiv]=useState()
+  const [hoverDiv, setHoverDiv] = useState()
   const myexp = [
     {
       org_name: "Webzeel pvt.ltd",
@@ -91,10 +91,10 @@ const Experience = () => {
         {myexp.map((x, index) => {
           return (
             <motion.div
-            onMouseEnter={()=>setHoverDiv(index)}
-              onMouseMove={(e)=>{if(hoverDiv===index)handleMouseMove(e)}}
-              onMouseLeave={(e)=>{if(hoverDiv===index)handleMouseLeave(e)}}
-              style={hoverDiv===index&&{
+              onMouseEnter={() => setHoverDiv(index)}
+              onMouseMove={(e) => { if (hoverDiv === index) handleMouseMove(e) }}
+              onMouseLeave={(e) => { if (hoverDiv === index) handleMouseLeave(e) }}
+              style={hoverDiv === index && {
                 rotateY,
                 rotateX,
                 transformStyle: "preserve-3d",
