@@ -47,7 +47,10 @@ Error generating stack: `+$.message+`
   MineSweeper is a game , Completely made with React+TailwindCSS. It is a clone of Stake diamond game.
   It is my first game.Enjoy!!       
     
-  </p>`,link:"https://rutvikk04.github.io/minesweeper_game/"},{title:"Live ChatApp",organization:"Personal Project",frameworks:["Node JS","React JS","ExpressJS","MongoDB"],thirdParty:["Socket.io"],description:`<p>
+  </p>`,link:"https://rutvikk04.github.io/minesweeper_game/"},{title:"Easy PDF generator Online",organization:"Personal Project",frameworks:["React JS","TailwindCSS"],thirdParty:[],description:`<p>
+This is the tool where one can create and download PDF online . We provide you a Text editor. Fill data and generate and get your pdf in seconds.  
+    
+  </p>`,link:"https://rutvikk04.github.io/Easy-PDF/"},{title:"Live ChatApp",organization:"Personal Project",frameworks:["Node JS","React JS","ExpressJS","MongoDB"],thirdParty:["Socket.io"],description:`<p>
      It's live chat app with One to One personal As well as group chat features.User can login and enjoy the chat application..
   </p>`,link:"not_live"},{title:"BMI calculator",organization:"Personal Project",frameworks:["JavaScript","HTML","CSS"],thirdParty:[],description:`<p>
     BMI calculator is used to measure your body Mass index by using your height and wight.This calculator calculate and give infromation about you are underweight or overwight.          
