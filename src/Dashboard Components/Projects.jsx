@@ -30,6 +30,17 @@ const Projects = () => {
       link: "https://rutvikk04.github.io/minesweeper_game/",
     },
     {
+      title: "Easy PDF generator Online",
+      organization: "Personal Project",
+      frameworks: ["React JS",  "TailwindCSS"],
+      thirdParty: [],
+      description: `<p>
+This is the tool where one can create and download PDF online . We provide you a Text editor. Fill data and generate and get your pdf in seconds.  
+    
+  </p>`,
+      link: "https://rutvikk04.github.io/Easy-PDF/",
+    },
+    {
       title: "Live ChatApp",
       organization: "Personal Project",
       frameworks: ["Node JS", "React JS", "ExpressJS", "MongoDB"],
