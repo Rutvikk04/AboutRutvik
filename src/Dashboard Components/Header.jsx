@@ -3,6 +3,7 @@ import Resume from "../Assets/Documents/Rutvik_MERN.pdf";
 import myPhoto from "../Assets/myphoto.jpg";
 import SocialMedia from "./SocialMedia";
 import { useInView } from "framer-motion";
+import CanvasModel from "../canvas";
 const Header = () => {
   const ref = useRef()
   const isInView = useInView(ref, { once: true })
@@ -90,8 +91,8 @@ const Header = () => {
         </div>
       </div>
       {/* Image And Social Media DIv */}
-      <div className="group max-md:hidden max-lg:hidden w-1/2 flex flex-col h-full justify-center items-left ">
-        <img
+      <div className="group max-md:hidden max-lg:hidden w-1/2  flex flex-col h-full justify-center mt-20">
+        {/* <img
           src={myPhoto}
           style={{
             transform: isInView ? "none" : "translateX(100%)",
@@ -99,7 +100,8 @@ const Header = () => {
             transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
           }}
           className="myphoto  z-40  w-[22rem] h-auto object-fill rounded-full border border-sky-700 shadow-2xl shadow-sky-500 "
-        />
+        /> */}
+        <CanvasModel/>
 
       </div>
     </div>
