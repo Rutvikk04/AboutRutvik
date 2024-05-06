@@ -1,9 +1,9 @@
 import React, { Fragment, useRef } from "react";
 import Resume from "../Assets/Documents/Rutvik_MERN.pdf";
-import myPhoto from "../Assets/myphoto.jpg";
 import SocialMedia from "./SocialMedia";
-import { useInView } from "framer-motion";
-import CanvasModel from "../canvas";
+import { transform, useInView } from "framer-motion";
+import CoderAnimation from "../Assets/Hackerboy.json"
+import Lottie from "lottie-react";
 const Header = () => {
   const ref = useRef()
   const isInView = useInView(ref, { once: true })
@@ -91,7 +91,7 @@ const Header = () => {
         </div>
       </div>
       {/* Image And Social Media DIv */}
-      <div className="group max-md:hidden max-lg:hidden w-1/2  flex flex-col h-full justify-center mt-20">
+      <div className="group max-md:hidden max-lg:hidden w-1/2  flex flex-col h-full justify-center ">
         {/* <img
           src={myPhoto}
           style={{
@@ -101,7 +101,19 @@ const Header = () => {
           }}
           className="myphoto  z-40  w-[22rem] h-auto object-fill rounded-full border border-sky-700 shadow-2xl shadow-sky-500 "
         /> */}
-        <CanvasModel/>
+        {/* <img className="h-96 max-md:rounded-full" src={boyPNG} /> */}
+        
+          <div
+          style={{
+            opacity: isInView ? 1 : 0,
+            transform: isInView ? "none" : "translateY(-50%)",
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.4s"
+          }}
+          className="myphoto max-md:m-auto w-[80%] max-md:w-[90%]">
+          <Lottie loop={true} animationData={CoderAnimation} />
+
+        </div>
+        
 
       </div>
     </div>
