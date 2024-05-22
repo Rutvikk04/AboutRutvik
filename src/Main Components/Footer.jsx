@@ -14,7 +14,7 @@ const Footer = () => {
   const menuItems = ["Home", "Projects", "Experience", "About", "Contact"];
   const services = ["HTML5","CSS3","MERN stack", "Next JS", 'TailwindCSS', "Python"]
   return (
-    <footer className=" bg-gradient-to-br from-black via-blue-700 to-black border-t text-white max-sm:p-2 p-5">
+    <footer className=" bg-gradient-to-br from-black via-blue-800 to-black border-t text-white max-sm:p-2 p-5">
       <section className=" z-50 border-b-2 max-sm:space-y-5 w-fit mx-auto max-sm:mx-3 flex max-sm:flex-col  space-x-20 max-sm:space-x-0 max-sm:place-content-start place-content-center">
         <div className="w-auto ">
           <h1 className="text-lg text-center max-sm:text-start font-semibold text-sky-500">Social Links</h1>
@@ -116,6 +116,9 @@ const Footer = () => {
           <div className="flex items-center"><Smartphone className="mr-2 w-5 h-5"/>+91 9974608736</div>
           </section>
         </div>
+      </section>
+      <section className="text-center border-t py-2 font-bold text-sm">
+      © Rutvik Amarcholi 2023-24
       </section>
     </footer>
   );

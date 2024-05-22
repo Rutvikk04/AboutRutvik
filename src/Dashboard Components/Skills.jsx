@@ -136,7 +136,7 @@ const Skills = () => {
                     className="lg:preserve-3d  group "
                   >
                     <img
-                      className="shadow-lg  group-hover:shadow-blue-500 preserve-3d w-20 h-20 max-sm:w-28 max-sm:h-28  rounded-full mx-auto object-center"
+                      className="shadow-lg object-cover group-hover:shadow-blue-500 preserve-3d w-20 h-20 max-sm:w-28 max-sm:h-28  rounded-full mx-auto object-center"
                       alt="skill_logo"
                       src={x.img}
                     />
