@@ -16,7 +16,7 @@ const SocialMedia = () => {
         transition: 'all 1.1s cubic-bezier(.1,.5,.7,1) 1.5s '
         // transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
       }}
-      ref={ref} className="flex flex-col max-md:absolute  space-y-4  justify-center px-5 max-sm:px-1">
+      ref={ref} className="flex z-50 flex-col max-md:absolute  space-y-4  justify-center px-5 max-sm:px-1">
       <a href="https://github.com/Rutvikk04" target="_blank" className="text-white hover:shadow-md rounded-full hover:shadow-sky-500 cursor-pointer p-1">
         <Github className="max-sm:h-4 max-sm:w-4 " />
       </a>

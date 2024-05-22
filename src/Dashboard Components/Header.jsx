@@ -56,7 +56,7 @@ const Header = () => {
             transform: isInView ? "none" : "translateY(-50%)",
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.4s"
           }}
-          className="mx-auto max-md:px-4 md:w-1/2 text-center text-md font-semibold text-gray-400 max-sm:flex-nowrap max-sm:line-clamp-6">
+          className="mx-auto z-50 max-md:px-4 md:w-1/2 text-center text-md font-semibold text-gray-400 max-sm:flex-nowrap max-sm:line-clamp-6">
           I Am Self Learned,Passionate Coder withover{" "}
           <span className="text-white">1.5 years</span> of Experience.I Completed Many
           Freelance Project As Well As Company Project with Good Response And
@@ -102,8 +102,8 @@ const Header = () => {
           className="myphoto  z-40  w-[22rem] h-auto object-fill rounded-full border border-sky-700 shadow-2xl shadow-sky-500 "
         /> */}
         {/* <img className="h-96 max-md:rounded-full" src={boyPNG} /> */}
-        
-          <div
+
+        <div
           style={{
             opacity: isInView ? 1 : 0,
             transform: isInView ? "none" : "translateY(-50%)",
@@ -111,10 +111,7 @@ const Header = () => {
           }}
           className="myphoto max-md:m-auto w-[80%] max-md:w-[90%]">
           <Lottie loop={true} animationData={CoderAnimation} />
-
         </div>
-        
-
       </div>
     </div>
   );

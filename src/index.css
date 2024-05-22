@@ -2,13 +2,19 @@
 @tailwind components;
 @layer components {
     .hero-btn{
-    @apply shadow-md max-md:w-full shadow-gray-300 text-gray-400 font-semibold p-2 rounded-md hover:bg-gray-700 hover:shadow-md hover:shadow-blue-400 hover:outline-none hover:text-blue-500 duration-300 ease-linear hover:scale-105 
+    @apply shadow-md max-md:w-full z-50 shadow-gray-300 text-gray-400 font-semibold p-2 rounded-md hover:bg-gray-700 hover:shadow-md hover:shadow-blue-400 hover:outline-none hover:text-blue-500 duration-300 ease-linear hover:scale-105 
    }
    .btn-secondary{
     @apply shadow-md shadow-blue-300 text-blue-400 font-semibold p-2 rounded-md hover:bg-white hover:shadow-md hover:shadow-gray-400 hover:outline-none hover:text-blue-500 duration-300 ease-linear hover:scale-105
    }
+   .bg-div{
+    @apply shadow-xl bg-opacity-50 shadow-white rounded-md w-32 h-5 absolute bg-blue-900 transition-all 
+   }
+   .form-input{
+    @apply w-full z-50 bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white
+   }
    *{
-    @apply font-dm-sans
+    @apply font-dm-sans 
    }
  }
 @tailwind utilities;
