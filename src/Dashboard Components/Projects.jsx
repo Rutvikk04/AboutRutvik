@@ -1,13 +1,20 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import easyPDF from "../Assets/Project Images/EasyPDF.png"
+import MineSweeperGame from "../Assets/Project Images/StakeGame.png"
+import chatApp from "../Assets/Project Images/chatApp.png"
+import portfolio from "../Assets/Project Images/portfolio.png"
+import shopeasy from "../Assets/Project Images/shopeasy.png"
+import bmi from "../Assets/Project Images/bmi_calculator.png"
 const Projects = () => {
   const myProjects = [
     {
       title: "ShopEasy.AI",
       organization: "Webzeel pvt.ltd",
-      frameworks: ["React JS", "Node JS", "TailwindCSS", "MUI"],
-      thirdParty: ["Open AI", "Razorpay", "ShipRocket", "Axios", "Redux Thunk"],
+      image:shopeasy,
+      frameworks: ["MERN stack", "TailwindCSS", "MUI"],
+      thirdParty: ["Open AI", "Razorpay", "ShipRocket", "Axios"],
       description: `<p>
     ShopEasy.ai is an ai based e-commerce platform where user can make it's own
     store and can easily maintain it using admin panel. <br>
@@ -19,6 +26,7 @@ const Projects = () => {
     },
     {
       title: "MineSweeper Game",
+      image:MineSweeperGame ,
       organization: "Personal Project",
       frameworks: ["React JS",  "TailwindCSS"],
       thirdParty: [],
@@ -30,7 +38,8 @@ const Projects = () => {
       link: "https://rutvikk04.github.io/minesweeper_game/",
     },
     {
-      title: "Easy PDF generator Online",
+      title: "Easy PDF",
+      image:easyPDF,
       organization: "Personal Project",
       frameworks: ["React JS",  "TailwindCSS"],
       thirdParty: [],
@@ -42,6 +51,7 @@ This is the tool where one can create and download PDF online . We provide you a
     },
     {
       title: "Live ChatApp",
+      image:chatApp,
       organization: "Personal Project",
       frameworks: ["Node JS", "React JS", "ExpressJS", "MongoDB"],
       thirdParty: ["Socket.io"],
@@ -53,6 +63,7 @@ This is the tool where one can create and download PDF online . We provide you a
     {
       title: "BMI calculator",
       organization: "Personal Project",
+      image:bmi,
       frameworks: ["JavaScript", "HTML", "CSS"],
       thirdParty: [],
       description: `<p>
@@ -64,6 +75,7 @@ This is the tool where one can create and download PDF online . We provide you a
     },
     {
       title: "My Portfolio",
+      image:portfolio,
       organization: "Personal Project",
       frameworks: ["React JS", "TailwindCSS"],
       thirdParty: [],
@@ -120,15 +132,16 @@ This is the tool where one can create and download PDF online . We provide you a
               >
                 <SwiperSlide
                   key={index}
-                  className=" transition-transform text-center cursor-pointer"
+                  className=" transition-transform cursor-pointer"
                 >
                   <div className="w-[300px] h-[420px] mb-3 bg-transparent cursor-pointer group md:perspective">
                     <div className="relative md:group-hover:my-rotate w-full h-full duration-1000 md:preserve-3d">
-                      <div className="absolute overflow-y-auto shadow-md shadow-sky-600 p-3 rounded-md backface-hidden bg-gradient-to-b from-gray-800 to-gray-900 text-white border border-sky-300 w-full h-full">
+                      <div className="absolute overflow-y-auto shadow-lg shadow-sky-600 p-3 rounded-md backface-hidden bg-gradient-to-b from-blue-950 to-black text-white  w-full h-full">
                         <a
                           href={x.link}
-                          className="font-semibold text-sky-500 text-2xl text-center underline"
+                          className="font-semibold text-sky-500 text-2xl text-left underline "
                         >
+                     <img src={x.image} className="h-44 w-full border border-blue-400 rounded-sm"/>
                           {x.title}
                         </a>
                         <div
@@ -138,28 +151,27 @@ This is the tool where one can create and download PDF online . We provide you a
                         <h1 className="font-bold text-sky-400 mt-2">
                           Language & Frameworks:
                         </h1>
-                        <ul className="ml-2">
+                
                           {x.frameworks.map((y, index) => {
-                            return <li>{y}</li>;
+                            return <span>{y} , </span>;
                           })}
-                        </ul>
+                       
                         {x.thirdParty?.length ? (
                           <>
                             {" "}
                             <h1 className="font-bold text-sky-400 mt-2">
                               3rd Party Integrations:
                             </h1>
-                            <ul className="ml-2">
                               {x.thirdParty.map((z, index) => {
-                                return <li>{z}</li>;
+                                return <span>{z}, </span>;
                               })}
-                            </ul>
+                            
                           </>
                         ) : (
                           <></>
                         )}
                       </div>
-                      <div className="absolute shadow-md shadow-sky-600 c1 rounded-md p-2 backface-hidden my-rotate w-full h-full bg-gradient-to-b border border-sky-300  from-gray-900 to-gray-800">
+                      <div className="absolute shadow-lg shadow-sky-600 c1 rounded-md p-2 backface-hidden my-rotate w-full h-full bg-gradient-to-b  from-blue-950 to-black">
                         <div
                           className="text-white mb-2"
                           dangerouslySetInnerHTML={{ __html: description }}
