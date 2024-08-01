@@ -5,7 +5,6 @@ import Projects from "./Dashboard Components/Projects";
 import About from "./Dashboard Components/About";
 import Experience from "./Dashboard Components/Experience";
 import ContactME from "./Dashboard Components/ContactME";
-import Background from "./Main Components/Background";
 const Dashboard = () => {
   return (
     <>

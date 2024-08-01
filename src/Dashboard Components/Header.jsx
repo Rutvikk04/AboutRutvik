@@ -1,22 +1,39 @@
-import React, { Fragment, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Resume from "../Assets/Documents/Rutvik_MERN.pdf";
 import SocialMedia from "./SocialMedia";
-import { transform, useInView } from "framer-motion";
+import { animate, easeInOut, useInView, useMotionTemplate, useMotionValue } from "framer-motion";
 import CoderAnimation from "../Assets/Hackerboy.json"
 import Lottie from "lottie-react";
+import myImage from "../Assets/rutvik_profile-bg.png"
+import { motion } from "framer-motion";
 const Header = () => {
   const ref = useRef()
   const isInView = useInView(ref, { once: true })
+  const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C']
+  const color=useMotionValue(COLORS[0])
+  const backgroundImage=useMotionTemplate`radial-gradient(125% 125% at 70% 0% ,#020617 50%, ${color})`
+
+  useEffect(()=>{
+animate(color,COLORS,{
+  ease:easeInOut,
+  duration:5,
+  repeat:Infinity,
+  repeatType:"mirror"
+})
+  },[])
   return (
-    <div id="Home" className="flex justify-between bg-gradient-to-b from-black to-gray-900 h-screen py-4 ">
+    <motion.div id="Home" style={
+      {backgroundImage}
+    } className="flex  justify-between z-20 h-screen py-4 ">
       {/* INfo And Buttons Div */}
       <SocialMedia className={`${isInView ? 'opacity-0' : 'opacity-100'}`} />
+
       <div className="infoDIv lg:w-[75%] flex flex-col justify-around h-full ">
         <div className="flex flex-col items-center text-center justify-between h-16 overflow-hidden">
           <div style={{
             opacity: isInView ? 1 : 0,
-            transition: "all 0.5s ease 1s"
-          }} className="text-4xl space-y-5 pt-5 text-center text-white   animate-text-scroll">
+            transition: "all 0.5s ease"
+          }} className="text-4xl space-y-5 pt-5 text-center text-white  animate-text-scroll">
             <h1>Hola...</h1>
             <h1>Hi..</h1>
             <h1>नमस्ते</h1>
@@ -56,7 +73,7 @@ const Header = () => {
             transform: isInView ? "none" : "translateY(-50%)",
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.4s"
           }}
-          className="mx-auto z-50 max-md:px-4 md:w-1/2 text-center text-md font-semibold text-gray-400 max-sm:flex-nowrap max-sm:line-clamp-6">
+          className="mx-auto z-20 max-md:px-4 md:w-1/2 text-center text-md font-semibold text-gray-400  max-sm:flex-nowrap max-sm:line-clamp-6">
           I Am Self Learned,Passionate Coder withover{" "}
           <span className="text-white">1.5 years</span> of Experience.I Completed Many
           Freelance Project As Well As Company Project with Good Response And
@@ -70,7 +87,7 @@ const Header = () => {
             style={{
               opacity: isInView ? 1 : 0,
               transform: isInView ? "none" : "translateX(-50%)",
-              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.4s"
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) "
             }}
             download="Rutvik_MERN_Resume"
             className="hero-btn"
@@ -81,7 +98,7 @@ const Header = () => {
             style={{
               opacity: isInView ? 1 : 0,
               transform: isInView ? "none" : "translateX(50%)",
-              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.4s"
+              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) "
             }}
             className=" hero-btn cursor-pointer"
             href="#Contact"
@@ -91,29 +108,20 @@ const Header = () => {
         </div>
       </div>
       {/* Image And Social Media DIv */}
-      <div className="group max-md:hidden max-lg:hidden w-1/2  flex flex-col h-full justify-center ">
-        {/* <img
-          src={myPhoto}
-          style={{
-            transform: isInView ? "none" : "translateX(100%)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-          }}
-          className="myphoto  z-40  w-[22rem] h-auto object-fill rounded-full border border-sky-700 shadow-2xl shadow-sky-500 "
-        /> */}
-        {/* <img className="h-96 max-md:rounded-full" src={boyPNG} /> */}
 
+      <div className=" max-md:hidden flex items-center w-1/2 rounded-full max-lg:hidden   flex-col justify-center ">
         <div
           style={{
             opacity: isInView ? 1 : 0,
             transform: isInView ? "none" : "translateY(-50%)",
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.4s"
           }}
-          className="myphoto max-md:m-auto w-[80%] max-md:w-[90%]">
-          <Lottie loop={true} animationData={CoderAnimation} />
+          className="myphoto  overflow-hidden  h-[80%] shadow-sm shadow-white">
+          {/* <Lottie loop={true} animationData={CoderAnimation} /> */}
+          <img className="scale-95 z-10" src={myImage}/>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

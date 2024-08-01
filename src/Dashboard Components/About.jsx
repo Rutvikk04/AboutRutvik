@@ -1,7 +1,6 @@
 import React from "react";
 import Lottie from "lottie-react"
 import boyAnimation from "../Assets/BoyReadingBook.json"
-import boyPNG from "../Assets/BoyBanner.png";
 import { useRef } from "react";
 const About = () => {
   const phoneRef=useRef()
@@ -19,8 +18,8 @@ const About = () => {
           out my journey as mentioned in projects section.
           <br />
           <br />
-          I am very flexible and always Ready to learn new thing and languages.I
-          also tried Blender software and other animation softwares.Also I am fast-learner and can easily addopt new Environment.
+          I am very flexible and always Ready to learn new thing and languages. I
+          also tried Blender software and other animation softwares. Also I am fast-learner and can easily addopt new Environment.
           <br />
           <br />
           I am very puctual, gentle, Hard-working, kind, enthusiastic, And
