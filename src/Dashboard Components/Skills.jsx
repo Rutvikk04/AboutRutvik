@@ -6,6 +6,8 @@ import reactLogo from "../Assets/React.png";
 import node from "../Assets/Node js.png";
 import mongodb from "../Assets/mongodb.png";
 import tailwind from "../Assets/Tailwind.jpg";
+import bootstrap from "../Assets/bootstrap.png";
+import sql from "../Assets/sql.png";
 import git from "../Assets/git.png";
 import NextJs from "../Assets/NextJS.png";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -31,7 +33,9 @@ const Skills = () => {
     { title: "Next JS", img: NextJs },
     { title: "Node JS", img: node },
     { title: "MongoDB", img: mongodb },
+    { title: "MySQL", img: sql },
     { title: "TailwindCSS", img: tailwind },
+    { title: "Bootstrap", img: bootstrap },
     { title: "Git & Github", img: git },
   ];
   const x = useMotionValue(0);
