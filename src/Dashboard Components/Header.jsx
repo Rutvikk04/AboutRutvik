@@ -2,8 +2,6 @@ import React, { useEffect, useRef } from "react";
 import Resume from "../Assets/Documents/Rutvik_MERN.pdf";
 import SocialMedia from "./SocialMedia";
 import { animate, easeInOut, useInView, useMotionTemplate, useMotionValue } from "framer-motion";
-import CoderAnimation from "../Assets/Hackerboy.json"
-import Lottie from "lottie-react";
 import myImage from "../Assets/rutvik_profile-bg.png"
 import { motion } from "framer-motion";
 const Header = () => {
@@ -22,9 +20,9 @@ animate(color,COLORS,{
 })
   },[])
   return (
-    <motion.div id="Home" style={
-      {backgroundImage}
-    } className="flex  justify-between z-20 h-screen py-4 ">
+    <motion.div id="Home" 
+    style={{backgroundImage}}
+    className="flex  justify-between z-20 h-screen py-4 ">
       {/* INfo And Buttons Div */}
       <SocialMedia className={`${isInView ? 'opacity-0' : 'opacity-100'}`} />
 
@@ -107,8 +105,6 @@ animate(color,COLORS,{
           </a>
         </div>
       </div>
-      {/* Image And Social Media DIv */}
-
       <div className=" max-md:hidden flex items-center w-1/2 rounded-full max-lg:hidden   flex-col justify-center ">
         <div
           style={{
@@ -117,7 +113,6 @@ animate(color,COLORS,{
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.4s"
           }}
           className="myphoto  overflow-hidden  h-[80%] shadow-sm shadow-white">
-          {/* <Lottie loop={true} animationData={CoderAnimation} /> */}
           <img className="scale-95 z-10" src={myImage}/>
         </div>
       </div>

@@ -89,7 +89,7 @@ This is the tool where one can create and download PDF online . We provide you a
   return (
     <div
       id="Projects"
-      className="h-full py-10 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5"
+      className="h-full py-16 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5"
     >
       <div>
         <h1 className="text-xl font-medium text-sky-600  text-center ">

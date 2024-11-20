@@ -100,4 +100,21 @@
   display: none !important;
 }
 
+.cursor-dot , .cursor-circle{
+  position:fixed;
+  top:20%;
+  left:0;
+  transform: translate(-50%,-50%);
+  z-index: 50;
+  background-color: red;
+  border-radius: 50%;
+  padding: 30px;
+}
+.cursor-dot{
+  padding: 2px;
+}
+.cursor-circle{
+  padding: 10px !important;
+  background-color: green !important;
+}
 

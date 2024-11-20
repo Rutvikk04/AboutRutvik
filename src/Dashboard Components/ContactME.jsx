@@ -31,7 +31,7 @@ const ContactME = () => {
   }, [isSent])
 
   return (
-    <div id='Contact' className=" z-50  bg-gradient-to-b from-gray-900 to-black ">
+    <div id='Contact' className=" z-50  bg-gradient-to-b py-14 from-gray-900 to-black ">
       {
         popUp &&
         <Popup />
