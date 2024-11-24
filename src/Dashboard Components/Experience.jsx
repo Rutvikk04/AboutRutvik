@@ -10,8 +10,19 @@ const Experience = () => {
   const [hoverDiv, setHoverDiv] = useState()
   const myexp = [
     {
+      org_name: "Rain Infotech pvt.ltd",
+      date: "01 August 2024 to Present",
+      Role: "Full Stack / NextJS Developer",
+      team: 8,
+      responsibilities: [
+        "Optimization and Development of WebApp",
+        "Full stack NextJS app development",
+        "R&D on New Features And Project Development",
+      ],
+    },
+    {
       org_name: "Webzeel pvt.ltd",
-      date: "01 April 2023 to Present",
+      date: "01 April 2023 to 01 February 2024",
       Role: "Sr.MERN Stack Developer",
       team: 8,
       responsibilities: [
@@ -87,7 +98,7 @@ const Experience = () => {
         Pit-stops of my journey..
       </h1>
       <div class="loader-line"></div>
-      <div className="m-auto md:space-x-5  max-w-[1440px] flex max-sm:flex-col  justify-between px-6 py-3">
+      <div className="m-auto md:space-x-5  max-w-[1440px] flex max-lg:flex-col  justify-between px-6 py-3">
         {myexp.map((x, index) => {
           return (
             <motion.div
