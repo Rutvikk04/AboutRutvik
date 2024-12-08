@@ -79,7 +79,7 @@ const Skills = () => {
     y.set(0);
   };
   return (
-    <div className="h-full w-full py-20 bg-gradient-to-b from-gray-900 to-black">
+    <div className="h-full w-full py-20 bg-gradient-to-b from-transparent to-black">
       {/* Skill logos */}
       <h1 className="text-xl font-medium text-sky-600  text-center ">
         Key Skills

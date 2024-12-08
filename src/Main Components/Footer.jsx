@@ -83,7 +83,7 @@ const Footer = () => {
       <section className="grid max-w-[1440px] mx-auto grid-cols-4 max-sm:grid-cols-2 p-5 text-left">
         <div>
           <h1 className="text-2xl text-sky-500 font-pacifico ">Rutvik</h1>
-          <p className="w-44 max-sm:w-36"><b>MERN Stack Developer</b> with <b className="underline">1.6 years</b> of experience..</p>
+          <p className="w-44 max-sm:w-36"><b>MERN Stack Developer</b> with <b className="underline">2 years</b> of experience..</p>
         </div>
         <div className="max-sm:mb-4">
           <h1 className="text-lg  font-semibold text-sky-500">Browse</h1>

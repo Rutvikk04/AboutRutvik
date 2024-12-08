@@ -3,30 +3,35 @@ import Resume from "../Assets/Documents/Rutvik_MERN.pdf";
 import SocialMedia from "./SocialMedia";
 import { animate, easeInOut, useInView, useMotionTemplate, useMotionValue } from "framer-motion";
 import myImage from "../Assets/rutvik_profile-bg.png"
+import bgVideo from "../Assets/bg-video.mp4"
 import { motion } from "framer-motion";
 const Header = () => {
   const ref = useRef()
   const isInView = useInView(ref, { once: true })
-  const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C']
-  const color=useMotionValue(COLORS[0])
-  const backgroundImage=useMotionTemplate`radial-gradient(125% 125% at 70% 0% ,#020617 50%, ${color})`
+  // const COLORS = ['#13FFAA', '#1E67C6', '#CE84CF', '#DD335C']
+  // const color=useMotionValue(COLORS[0])
+  // const backgroundImage=useMotionTemplate`radial-gradient(125% 125% at 70% 0% ,#020617 50%, ${color})`
 
-  useEffect(()=>{
-animate(color,COLORS,{
-  ease:easeInOut,
-  duration:5,
-  repeat:Infinity,
-  repeatType:"mirror"
-})
-  },[])
+  //   useEffect(()=>{
+  // animate(color,COLORS,{
+  //   ease:easeInOut,
+  //   duration:5,
+  //   repeat:Infinity,
+  //   repeatType:"mirror"
+  // })
+  //   },[])
   return (
-    <motion.div id="Home" 
-    style={{backgroundImage}}
-    className="flex  justify-between z-20 h-screen py-4 ">
+    <motion.div id="Home"
+      // style={{backgroundImage}}
+      className="flex  justify-center bg-video z-20 h-screen py-4 ">
+      <video autoPlay muted loop id="background-video">
+        <source src={bgVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       {/* INfo And Buttons Div */}
       <SocialMedia className={`${isInView ? 'opacity-0' : 'opacity-100'}`} />
 
-      <div className="infoDIv lg:w-[75%] flex flex-col justify-around h-full ">
+      <div className="infoDIv  flex flex-col justify-around h-full ">
         <div className="flex flex-col items-center text-center justify-between h-16 overflow-hidden">
           <div style={{
             opacity: isInView ? 1 : 0,
@@ -73,7 +78,7 @@ animate(color,COLORS,{
           }}
           className="mx-auto z-20 max-md:px-4 md:w-1/2 text-center text-md font-semibold text-gray-400  max-sm:flex-nowrap max-sm:line-clamp-6">
           I Am Self Learned,Passionate Coder withover{" "}
-          <span className="text-white">1.5 years</span> of Experience.I Completed Many
+          <span className="text-white">2 years</span> of Experience.I Completed Many
           Freelance Project As Well As Company Project with Good Response And
           Desired Output.If you Are Seeking For A Good{" "}
           <span className="text-white">MERN Developer</span> Than Your Search Is over
@@ -105,7 +110,7 @@ animate(color,COLORS,{
           </a>
         </div>
       </div>
-      <div className=" max-md:hidden flex items-center w-1/2 rounded-full max-lg:hidden   flex-col justify-center ">
+      {/* <div className=" max-md:hidden flex items-center w-1/2 rounded-full max-lg:hidden   flex-col justify-center ">
         <div
           style={{
             opacity: isInView ? 1 : 0,
@@ -115,7 +120,7 @@ animate(color,COLORS,{
           className="myphoto  overflow-hidden  h-[80%] shadow-sm shadow-white">
           <img className="scale-95 z-10" src={myImage}/>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 };

@@ -13,7 +13,7 @@ const About = () => {
       <div class="loader-line"></div>
       <div className=" max-w-[1440px] mx-auto flex max-md:flex-col justify-around items-center rounded-md">
         <p className="text-gray-200 w-[80%] max-md:w-full max-md:order-1 max-md:mt-2 p-2">
-          Hello there, I Am Rutvik Amarcholi working as a <b>Sr.MERN Stack Developer</b> with <b>1.5 years</b> of experience.I
+          Hello there, I Am Rutvik Amarcholi working as a <b>Sr.MERN Stack Developer</b> with <b>2 years</b> of experience.I
           completed Many company Projects As well as freelance projects through
           out my journey as mentioned in projects section.
           <br />

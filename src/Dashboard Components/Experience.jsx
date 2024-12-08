@@ -21,7 +21,7 @@ const Experience = () => {
       ],
     },
     {
-      org_name: "Webzeel pvt.ltd",
+      org_name: "Webzeel Services pvt.ltd",
       date: "01 April 2023 to 01 February 2024",
       Role: "Sr.MERN Stack Developer",
       team: 8,
