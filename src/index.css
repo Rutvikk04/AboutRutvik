@@ -15,7 +15,7 @@
   }
 
   .form-input {
-    @apply w-full z-50 bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white;
+    @apply w-full z-40 bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white;
   }
 
   * {
@@ -174,4 +174,75 @@ body {
   text-shadow: 4px 7px 10px #0ea4e98b;
   color: transparent;
   margin-bottom: 3px;
+}
+
+/* Navbar customs */
+.nav-div {
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.259);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Custom scroll effect */
+.navbar-scrolled {
+  @apply shadow-lg bg-white bg-opacity-90 backdrop-blur-sm;
+  transition: all 0.3s ease;
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.mobile-menu.open {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+}
+
+/* Underline animation */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
 }
