@@ -91,13 +91,12 @@ const Experience = () => {
       id="Experience"
       className="bg-gradient-to-b py-14 from-gray-900 to-black h-fit"
     >
-      <h1 className="text-xl font-medium text-sky-600  text-center ">
+      <h1 className="text-2xl font-bold text-sky-600  text-center ">
         Experience
       </h1>
-      <h1 className="text-2xl font-medium text-gray-300 text-center max-sm:text-xl mb-2">
+      <h1 className="text-lg text-gray-300 text-center mb-2">
         Pit-stops of my journey..
       </h1>
-      <div class="loader-line"></div>
       <div className="m-auto md:space-x-5  max-w-[1440px] flex max-lg:flex-col  justify-between px-6 py-3">
         {myexp.map((x, index) => {
           return (

@@ -81,13 +81,12 @@ const Skills = () => {
   return (
     <div className="h-full w-full py-20 bg-gradient-to-b from-transparent to-black">
       {/* Skill logos */}
-      <h1 className="text-xl font-medium text-sky-600  text-center ">
+      <h1 className="text-2xl font-bold text-sky-600  text-center ">
         Key Skills
       </h1>
-      <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl mb-2">
+      <h1 className="text-lg  text-gray-300 text-center mb-2">
         This Is My Playground....
       </h1>
-      <div className="loader-line"></div>
       <div className="m-auto md:space-x-5  max-w-[1440px]  max-sm:flex-col  justify-between px-6">
         {/* <div className=" mt-4 w-fit text-white  max-md:flex-wrap max-sm:space-y-3 mx-auto flex flex-wrap items-center justify-around max-md:grid max-md:grid-cols-4 max-sm:grid-cols-3"> */}
         <Swiper

@@ -36,11 +36,10 @@ const ContactME = () => {
         popUp &&
         <Popup />
       }
-      <h1 className="text-xl font-medium text-sky-600  text-center ">Contact Me</h1>
-      <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl">
+      <h1 className="text-2xl font-bold text-sky-600  text-center ">Contact Me</h1>
+      <h1 className="text-lg   text-gray-300 text-center ">
         Your word matters!
       </h1>
-      <div class="loader-line"></div>
       <div className="p-5 max-w-[1440px] mx-auto flex max-md:flex-col justify-between rounded-md">
         <div className="w-full md:px-12  lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
 

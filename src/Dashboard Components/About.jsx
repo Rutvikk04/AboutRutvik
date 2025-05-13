@@ -6,11 +6,10 @@ const About = () => {
   const phoneRef=useRef()
   return (
     <div id="About" className=" bg-gradient-to-b pb-5 from-black to-gray-900 md:px-20 ">
-      <h1 className="text-xl font-medium text-sky-600  text-center ">About</h1>
-      <h1 className="text-2xl font-medium  text-gray-300 text-center max-sm:text-xl">
-        Who am i?
+      <h1 className="text-2xl font-bold text-sky-600  text-center ">About Me</h1>
+      <h1 className="text-lg  text-gray-300 text-center">
+        Brief information about me
       </h1>
-      <div class="loader-line"></div>
       <div className=" max-w-[1440px] mx-auto flex max-md:flex-col justify-around items-center rounded-md">
         <p className="text-gray-200 w-[80%] max-md:w-full max-md:order-1 max-md:mt-2 p-2">
           Hello there, I Am Rutvik Amarcholi working as a <b>Sr.MERN Stack Developer</b> with <b>2 years</b> of experience.I

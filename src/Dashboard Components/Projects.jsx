@@ -92,13 +92,12 @@ This is the tool where one can create and download PDF online . We provide you a
       className="h-full py-16 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5"
     >
       <div>
-        <h1 className="text-xl font-medium text-sky-600  text-center ">
+        <h1 className="text-2xl font-bold text-sky-600  text-center ">
           Projects
         </h1>
-        <h1 className="text-2xl font-medium text-gray-300 text-center max-sm:text-xl mb-2">
+        <h1 className="text-lg  text-gray-300 text-center mb-2">
           Witness my Creativity And skills here...
         </h1>
-        <div class="loader-line"></div>
       </div>
       <div className="flex max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2">
         <Swiper
