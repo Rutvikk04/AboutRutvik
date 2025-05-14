@@ -21,6 +21,7 @@ import {
 const Skills = () => {
   const [hoverDiv, setHoverDiv] = useState()
   const [skillFilter, setSkillfiler] = useState()
+  const [currentActiveFilter, setCurrentActiveFilter] = useState("all")
 
   const myskills = [
     { title: "HTML5", img: HTML5, type: "fe" },
@@ -71,15 +72,35 @@ const Skills = () => {
     x.set(0);
     y.set(0);
   };
+
+const handleSKillFilter=(value)=>{
+  if(value=="all"){
+    setSkillfiler(myskills)
+  }
+  else{
+    let filteredSKills = myskills.filter(x=>value==="fe" || value==="be" ? x.type==value || x.type =="both" :x.type==value)
+    setSkillfiler(filteredSKills)
+  }
+  setCurrentActiveFilter(value)
+}
+
   return (
     <div className="h-full w-full py-20 bg-gradient-to-b from-transparent to-black">
-      <h1 className="text-2xl font-bold text-sky-600  text-center ">
+      <h4 className="text-2xl font-bold text-sky-600  text-center ">
         Key Skills
-      </h1>
-      <h1 className="text-lg  text-gray-300 text-center mb-2">
+      </h4>
+      <h5 className="text-lg  text-gray-300 text-center mb-2">
         This Is My Playground....
-      </h1>
+      </h5>
+
       <div className="m-auto md:space-x-5  max-w-[1440px]  max-sm:flex-col  justify-between px-6 max-sm:px-2">
+      <div className=" text-white flex flex-wrap gap-4 justify-center w-full my-8">
+        <button onClick={()=>handleSKillFilter("all")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter=="all" ? "active text-blue-600" :"text-white"}`}>All</button>
+        <button onClick={()=>handleSKillFilter("fe")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter== "fe" ? "active text-blue-600" :"text-white"}`}>Front-end</button>
+        <button onClick={()=>handleSKillFilter("be")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter== "be" ? "active text-blue-600" :"text-white"}`}>Backend</button>
+        <button onClick={()=>handleSKillFilter("db")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter== "db" ? "active text-blue-600" :"text-white"}`}>Database</button>
+        <button onClick={()=>handleSKillFilter("other")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter== "other" ? "active text-blue-600" :"text-white"}`}>Others</button>
+      </div>
         <div className="flex flex-wrap gap-4 justify-center">
           {skillFilter?.map((x, index) => {
             return (
