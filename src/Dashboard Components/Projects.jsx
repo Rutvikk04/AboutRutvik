@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from "swiper/modules";
 import easyPDF from "../Assets/Project Images/EasyPDF.png"
 import MineSweeperGame from "../Assets/Project Images/StakeGame.png"
 import chatApp from "../Assets/Project Images/chatApp.png"
@@ -12,23 +12,21 @@ const Projects = () => {
     {
       title: "ShopEasy.AI",
       organization: "Webzeel pvt.ltd",
-      image:shopeasy,
+      image: shopeasy,
       frameworks: ["MERN stack", "TailwindCSS", "MUI"],
-      thirdParty: ["Open AI", "Razorpay", "ShipRocket", "Axios"],
+      thirdParty: ["Open AI", "Razorpay", "ShipRocket"],
       description: `<p>
     ShopEasy.ai is an ai based e-commerce platform where user can make it's own
-    store and can easily maintain it using admin panel. <br>
-    Also the store is AI based so user can generate their content like blog, product description and
-    such things using AI.          
+    store and can easily maintain it using admin panel.          
     
   </p>`,
       link: "http://ShopEasy.AI",
     },
     {
       title: "MineSweeper Game",
-      image:MineSweeperGame ,
+      image: MineSweeperGame,
       organization: "Personal Project",
-      frameworks: ["React JS",  "TailwindCSS"],
+      frameworks: ["React JS", "TailwindCSS"],
       thirdParty: [],
       description: `<p>
   MineSweeper is a game , Completely made with React+TailwindCSS. It is a clone of Stake diamond game.
@@ -39,9 +37,9 @@ const Projects = () => {
     },
     {
       title: "Easy PDF",
-      image:easyPDF,
+      image: easyPDF,
       organization: "Personal Project",
-      frameworks: ["React JS",  "TailwindCSS"],
+      frameworks: ["React JS", "TailwindCSS"],
       thirdParty: [],
       description: `<p>
 This is the tool where one can create and download PDF online . We provide you a Text editor. Fill data and generate and get your pdf in seconds.  
@@ -51,7 +49,7 @@ This is the tool where one can create and download PDF online . We provide you a
     },
     {
       title: "Live ChatApp",
-      image:chatApp,
+      image: chatApp,
       organization: "Personal Project",
       frameworks: ["Node JS", "React JS", "ExpressJS", "MongoDB"],
       thirdParty: ["Socket.io"],
@@ -63,7 +61,7 @@ This is the tool where one can create and download PDF online . We provide you a
     {
       title: "BMI calculator",
       organization: "Personal Project",
-      image:bmi,
+      image: bmi,
       frameworks: ["JavaScript", "HTML", "CSS"],
       thirdParty: [],
       description: `<p>
@@ -75,7 +73,7 @@ This is the tool where one can create and download PDF online . We provide you a
     },
     {
       title: "My Portfolio",
-      image:portfolio,
+      image: portfolio,
       organization: "Personal Project",
       frameworks: ["React JS", "TailwindCSS"],
       thirdParty: [],
@@ -89,7 +87,7 @@ This is the tool where one can create and download PDF online . We provide you a
   return (
     <div
       id="Projects"
-      className="h-full py-16 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5"
+      className="h-full py-16 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5 max-sm:px-2"
     >
       <div>
         <h1 className="text-2xl font-bold text-sky-600  text-center ">
@@ -99,11 +97,11 @@ This is the tool where one can create and download PDF online . We provide you a
           Witness my Creativity And skills here...
         </h1>
       </div>
-      <div className="flex max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2">
+      <div className="flex py-6 max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2 my-2">
         <Swiper
           // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
-          className=" px-3 py-5 w-full h-full"
+          modules={[Navigation, Autoplay]}
+          className=" w-full h-full"
           breakpoints={{
             200: {
               slidesPerView: 1,
@@ -119,85 +117,69 @@ This is the tool where one can create and download PDF online . We provide you a
             },
           }}
           navigation
-          pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
+          autoplay={{
+            delay:1500,
+            disableOnInteraction:true
+          }}
         >
+
+
           {myProjects?.map((x, index) => {
             let { description } = x;
             return (
-              <div
-                key={index}
-                className="w-[300px] h-[420px] mb-3 bg-transparent cursor-pointer group perspective"
-              >
-                <SwiperSlide
-                  key={index}
-                  className=" transition-transform cursor-pointer"
-                >
-                  <div className="w-[300px] h-[420px] mb-3 bg-transparent cursor-pointer group md:perspective">
-                    <div className="relative md:group-hover:my-rotate w-full h-full duration-1000 md:preserve-3d">
-                      <div className="absolute overflow-y-auto shadow-lg shadow-sky-600 p-3 rounded-md backface-hidden bg-gradient-to-b from-blue-950 to-black text-white  w-full h-full">
-                        <a
-                          href={x.link}
-                          className="font-semibold text-sky-500 text-2xl text-left underline "
-                        >
-                     <img src={x.image} className="h-44 w-full border border-blue-400 rounded-sm"/>
-                          {x.title}
-                        </a>
-                        <div
-                          className="lg:line-clamp-2"
-                          dangerouslySetInnerHTML={{ __html: description }}
-                        />
-                        <h1 className="font-bold text-sky-400 mt-2">
-                          Language & Frameworks:
-                        </h1>
-                
-                          {x.frameworks.map((y, index) => {
-                            return <span>{y} , </span>;
-                          })}
-                       
-                        {x.thirdParty?.length ? (
-                          <>
-                            {" "}
-                            <h1 className="font-bold text-sky-400 mt-2">
-                              3rd Party Integrations:
-                            </h1>
-                              {x.thirdParty.map((z, index) => {
-                                return <span>{z}, </span>;
-                              })}
-                            
-                          </>
-                        ) : (
-                          <></>
-                        )}
-                      </div>
-                      <div className="absolute shadow-lg shadow-sky-600 c1 rounded-md p-2 backface-hidden my-rotate w-full h-full bg-gradient-to-b  from-blue-950 to-black">
-                        <div
-                          className="text-white mb-2"
-                          dangerouslySetInnerHTML={{ __html: description }}
-                        />
-                        {x.link === "not_live" ? (
-                          <button
-                            className="btn-secondary  text-sm"
-                            onClick={() =>
-                              window.alert("Not live yet, live Soon...")
-                            }
-                          >
-                            {x.title}
-                          </button>
-                        ) : (
-                          <a
-                            href={x.link}
-                            target="_blank"
-                            className="btn-secondary  text-sm"
-                          >
-                            {x.title}
-                          </a>
-                        )}
-                      </div>
+              <SwiperSlide key={index}>
+                <div className="project-card bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-[#1E293B] mx-2 h-[530px] max-sm:h-auto">
+                  {/* Project Image */}
+                  <div className="project-image p-4">
+                    <div className="rounded-xl overflow-hidden border border-cyan-500/30 shadow-lg">
+                      <img
+                        src={x.image}
+                        alt="ShopEasy.AI Project Screenshot"
+                        className="w-full h-48  object-cover"
+                      />
                     </div>
                   </div>
-                </SwiperSlide>
-              </div>
+                  {/* Project Content */}
+                  <div className="p-6 pt-0">
+                    {/* Project Title */}
+                    <h4 className="project-title text-2xl font-bold text-cyan-400 mb-3">
+                      {x.title}
+                    </h4>
+                    {/* Project Description */}
+                    <div className="text-gray-300 text-sm mb-5 leading-relaxed" dangerouslySetInnerHTML={{ __html: description }} />
+                    {/* Technologies Section */}
+                    <div className="mb-4">
+                      <h3 className="text-cyan-300 font-semibold text-sm uppercase tracking-wider mb-2">
+                        Language &amp; Frameworks:
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        {
+                          x.frameworks.map((y, index) => {
+                            return <span className="tech-badge bg-gray-800/50 text-gray-200 px-3 py-1 rounded-full text-xs">
+                              {y}
+                            </span>
+                          })
+                        }
+                      </div>
+                    </div>
+                    {/* Integrations Section */}
+                    {x.thirdParty?.length ?
+                      <div className="mb-2">
+                        <h3 className="text-cyan-300 font-semibold text-sm uppercase tracking-wider mb-2">
+                          3rd Party Integrations:
+                        </h3>
+                        <div className="flex flex-wrap gap-2">
+                          {x.thirdParty.map((z, index) => {
+                            return <span className="tech-badge bg-gray-800/50 text-gray-200 px-3 py-1 rounded-full text-xs">
+                              {z}
+                            </span>
+                          })}
+                        </div>
+                      </div> : <></>
+                    }
+                  </div>
+                </div>
+              </SwiperSlide>
             );
           })}
         </Swiper>

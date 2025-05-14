@@ -93,7 +93,7 @@ const Header = () => {
             Contact Me
           </a>
         </div> */}
-        <div className="flex justify-center space-x-5 my-3 max-md:mx-2 max-md:text-center">
+        <div className="flex max-sm:flex-col flex-row gap-3 justify-center  my-3 max-md:mx-2 max-md:text-center">
           {/* Primary Button */}
           <a
             className="btn-primary"

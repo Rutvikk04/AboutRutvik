@@ -246,3 +246,31 @@ body {
 .nav-link.active::after {
   width: 100%;
 }
+
+/*  project card */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.15);
+}
+
+.project-title {
+  transition: text-shadow 0.3s ease;
+}
+
+.project-title:hover {
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.6);
+}
+
+.tech-badge {
+  transition: all 0.2s ease;
+  background-color: rgba(34, 211, 238, 0.1);
+}
+
+
+.project-image {
+  transition: all 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.02);
+}

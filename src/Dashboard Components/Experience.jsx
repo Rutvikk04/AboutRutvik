@@ -10,7 +10,7 @@ const Experience = () => {
   const [hoverDiv, setHoverDiv] = useState()
   const myexp = [
     {
-      org_name: "Rain Infotech pvt.ltd",
+      org_name: "Rain Infotech ",
       date: "01 August 2024 to Present",
       Role: "Full Stack / NextJS Developer",
       team: 8,
@@ -21,7 +21,7 @@ const Experience = () => {
       ],
     },
     {
-      org_name: "Webzeel Services pvt.ltd",
+      org_name: "Webzeel Services",
       date: "01 April 2023 to 01 February 2024",
       Role: "Sr.MERN Stack Developer",
       team: 8,
@@ -34,7 +34,7 @@ const Experience = () => {
       ],
     },
     {
-      org_name: "Nucleus Lab pvt.ltd",
+      org_name: "Nucleus Lab ",
       date: "01 Novermber 2022 to 30 March 2023",
       Role: "Trainee MERN Stack Developer",
       team: 5,
@@ -97,7 +97,7 @@ const Experience = () => {
       <h1 className="text-lg text-gray-300 text-center mb-2">
         Pit-stops of my journey..
       </h1>
-      <div className="m-auto md:space-x-5  max-w-[1440px] flex max-lg:flex-col  justify-between px-6 py-3">
+      <div className="m-auto md:space-x-5  max-w-[1440px] flex max-lg:flex-col  justify-between px-6 max-sm:px-2 py-3">
         {myexp.map((x, index) => {
           return (
             <motion.div
@@ -110,7 +110,7 @@ const Experience = () => {
                 transformStyle: "preserve-3d",
               }}
               key={index}
-              className="relative max-md:mb-2 h-96 w-full rounded-xl bg-gradient-to-br border border-gray-600 from-gray-900 to-gray-600"
+              className="relative max-md:mb-2 min-h-[450px] w-full rounded-xl bg-gradient-to-br border border-gray-600 from-gray-900 to-gray-600"
             >
               <div
                 style={{
