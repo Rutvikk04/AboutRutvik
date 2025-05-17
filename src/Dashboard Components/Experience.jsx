@@ -91,12 +91,19 @@ const Experience = () => {
       id="Experience"
       className="bg-gradient-to-b py-14 from-gray-900 to-black h-fit"
     >
-      <h1 className="text-2xl font-bold text-sky-600  text-center ">
-        Experience
-      </h1>
-      <h1 className="text-lg text-gray-300 text-center mb-2">
-        Pit-stops of my journey..
-      </h1>
+
+              <div id="particles"></div>
+      <div className="relative w-fit mx-auto text-center z-10">
+        <h4 className="glow-underline text-4xl sm:text-5xl md:text-6xl font-bold text-textPrimary mb-2">
+          Roadmap of 
+          <span className="text-accentCyan"> Experience</span>
+        </h4>
+        <h5 className="text-sm md:text-base uppercase tracking-widest font-light mb-2 text-textMuted">
+         Each stop, a story of growth.
+        </h5>
+        {/* Decorative line */}
+        <div className="w-36 mx-auto h-px bg-gradient-to-r from-accentCyan to-transparent mb-12" />
+      </div>
       <div className="m-auto md:space-x-5  max-w-[1440px] flex max-lg:flex-col  justify-between px-6 max-sm:px-2 py-3">
         {myexp.map((x, index) => {
           return (

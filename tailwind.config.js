@@ -11,6 +11,13 @@ export default {
       'pacifico': [ 'Pacifico', 'cursive'] ,
       'dm-sans':[ 'DM Sans', 'sans-serif']
       },
+       colors: {
+        bg: '#0B1120',
+        textPrimary: '#FFFFFF',
+        textMuted: '#94A3B8',
+        accentCyan: '#00FFFF',
+        accentGreen: '#00FF00',
+      },
       keyframes: {
         upDown: {
           "0%": { transform: "translateY(0)" },

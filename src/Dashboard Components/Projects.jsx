@@ -90,12 +90,16 @@ This is the tool where one can create and download PDF online . We provide you a
       className="h-full py-16 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5 max-sm:px-2"
     >
       <div>
-        <h1 className="text-2xl font-bold text-sky-600  text-center ">
-          Projects
-        </h1>
-        <h1 className="text-lg  text-gray-300 text-center mb-2">
-          Witness my Creativity And skills here...
-        </h1>
+     <div className="relative w-fit mx-auto text-center z-10">
+        <h4 className="glow-underline text-4xl sm:text-5xl md:text-6xl font-bold text-textPrimary mb-2">
+           <span className="text-accentCyan">Projects</span>
+        </h4>
+        <h5 className="text-sm md:text-base uppercase tracking-widest font-light mb-2 text-textMuted">
+         Explore My Craft in Action.
+        </h5>
+        {/* Decorative line */}
+        <div className="w-36 mx-auto h-px bg-gradient-to-r from-accentCyan to-transparent mb-12" />
+      </div>
       </div>
       <div className="flex py-6 max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2 my-2">
         <Swiper

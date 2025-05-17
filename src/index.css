@@ -14,9 +14,9 @@
     @apply shadow-xl bg-opacity-50 shadow-white rounded-md w-32 h-5 absolute bg-blue-900 transition-all;
   }
 
-  .form-input {
+  /* .form-input {
     @apply w-full z-40 bg-gray-800 text-white mt-2 p-3 rounded-lg focus:outline-none shadow-sm shadow-white;
-  }
+  } */
 
   * {
     @apply font-dm-sans;
@@ -54,6 +54,14 @@
   100% {
     border-radius: 60% 40% 70% 40%/30% 30% 60% 40%;
   }
+}
+
+:root {
+  --color-bg: #0B1120;
+  --color-text-primary: #FFFFFF;
+  --color-text-muted: #94A3B8;
+  --color-accent-cyan: #00FFFF;
+  --color-accent-green: #00FF00;
 }
 
 body {
@@ -170,11 +178,12 @@ body {
 .header-hero {
   opacity: 1;
   transition: 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s;
-  -webkit-text-stroke: 1px white;
-  text-shadow: 4px 7px 10px #0ea4e98b;
+  -webkit-text-stroke: 1px #67e8f9;
+  text-shadow: 4px 8px 10px #0ea4e999;
   color: transparent;
   margin-bottom: 3px;
 }
+
 
 /* Navbar customs */
 .nav-div {
@@ -273,4 +282,85 @@ body {
 
 .project-image:hover {
   transform: scale(1.02);
+}
+
+.particle {
+  position: absolute;
+  background-color: var(--color-accent-green);
+  border-radius: 50%;
+  opacity: 0.2;
+  z-index: 5;
+  animation: float 15s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* contact form */
+
+.form-input {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-text-muted);
+  color: var(--color-text-primary);
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-input textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-input input:focus,
+.form-input textarea:focus {
+  outline: none;
+  border-bottom-color: var(--color-accent-cyan);
+  box-shadow: 0 1px 0 0 var(--color-accent-cyan);
+}
+
+.form-input input::placeholder,
+.form-input textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.7;
+}
+
+.form-input label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.form-input input:focus+label,
+.form-input textarea:focus+label,
+.form-input input:not(:placeholder-shown)+label,
+.form-input textarea:not(:placeholder-shown)+label {
+  top: -1.25rem;
+  font-size: 0.75rem;
+  color: var(--color-accent-cyan);
 }

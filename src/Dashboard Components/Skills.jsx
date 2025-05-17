@@ -73,34 +73,38 @@ const Skills = () => {
     y.set(0);
   };
 
-const handleSKillFilter=(value)=>{
-  if(value=="all"){
-    setSkillfiler(myskills)
+  const handleSKillFilter = (value) => {
+    if (value == "all") {
+      setSkillfiler(myskills)
+    }
+    else {
+      let filteredSKills = myskills.filter(x => value === "fe" || value === "be" ? x.type == value || x.type == "both" : x.type == value)
+      setSkillfiler(filteredSKills)
+    }
+    setCurrentActiveFilter(value)
   }
-  else{
-    let filteredSKills = myskills.filter(x=>value==="fe" || value==="be" ? x.type==value || x.type =="both" :x.type==value)
-    setSkillfiler(filteredSKills)
-  }
-  setCurrentActiveFilter(value)
-}
 
   return (
     <div className="h-full w-full py-20 bg-gradient-to-b from-transparent to-black">
-      <h4 className="text-2xl font-bold text-sky-600  text-center ">
-        Key Skills
-      </h4>
-      <h5 className="text-lg  text-gray-300 text-center mb-2">
-        This Is My Playground....
-      </h5>
+      <div className="relative w-fit mx-auto text-center z-10">
+        <h4 className="glow-underline text-4xl sm:text-5xl md:text-6xl font-bold text-textPrimary mb-2">
+          Key <span className="text-accentCyan">Skills</span>
+        </h4>
+        <h5 className="text-sm md:text-base uppercase tracking-widest font-light mb-2 text-textMuted">
+          This Is My Playground...
+        </h5>
+        {/* Decorative line */}
+        <div className="w-36 mx-auto h-px bg-gradient-to-r from-accentCyan to-transparent mb-12" />
+      </div>
 
       <div className="m-auto md:space-x-5  max-w-[1440px]  max-sm:flex-col  justify-between px-6 max-sm:px-2">
-      <div className=" text-white flex flex-wrap gap-4 justify-center w-full my-8">
-        <button onClick={()=>handleSKillFilter("all")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter=="all" ? "active text-blue-600" :"text-white"}`}>All</button>
-        <button onClick={()=>handleSKillFilter("fe")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter== "fe" ? "active text-blue-600" :"text-white"}`}>Front-end</button>
-        <button onClick={()=>handleSKillFilter("be")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter== "be" ? "active text-blue-600" :"text-white"}`}>Backend</button>
-        <button onClick={()=>handleSKillFilter("db")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter== "db" ? "active text-blue-600" :"text-white"}`}>Database</button>
-        <button onClick={()=>handleSKillFilter("other")} className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${currentActiveFilter== "other" ? "active text-blue-600" :"text-white"}`}>Others</button>
-      </div>
+        <div className=" text-white flex flex-wrap gap-4 justify-center w-full my-8">
+          <button onClick={() => handleSKillFilter("all")} className={`nav-link  hover:text-white px-1 py-2 text-sm font-medium ${currentActiveFilter == "all" ? "active text-white" : "text-gray-400"}`}>All</button>
+          <button onClick={() => handleSKillFilter("fe")} className={`nav-link  hover:text-white px-1 py-2 text-sm font-medium ${currentActiveFilter == "fe" ? "active text-white" : "text-gray-400"}`}>Frontend</button>
+          <button onClick={() => handleSKillFilter("be")} className={`nav-link  hover:text-white px-1 py-2 text-sm font-medium ${currentActiveFilter == "be" ? "active text-white" : "text-gray-400"}`}>Backend</button>
+          <button onClick={() => handleSKillFilter("db")} className={`nav-link  hover:text-white px-1 py-2 text-sm font-medium ${currentActiveFilter == "db" ? "active text-white" : "text-gray-400"}`}>Database</button>
+          <button onClick={() => handleSKillFilter("other")} className={`nav-link  hover:text-whit px-1 py-2 text-sm font-medium ${currentActiveFilter == "other" ? "active text-white" : "text-gray-400"}`}>Others</button>
+        </div>
         <div className="flex flex-wrap gap-4 justify-center">
           {skillFilter?.map((x, index) => {
             return (

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import Popup from '../popup/Popup';
+import messengerAnimation from "../Assets/animation/messenger.json"
+import Lottie from 'lottie-react';
 const ContactME = () => {
   const form = useRef();
   const serviceID = (import.meta.env.VITE_EMAIL_SERVICE_ID)
@@ -31,17 +33,24 @@ const ContactME = () => {
   }, [isSent])
 
   return (
-    <div id='Contact' className=" z-50  bg-gradient-to-b py-14 from-gray-900 to-black ">
+    <div id='Contact' className=" z-50  bg-gradient-to-b py-16 from-gray-900 to-black">
       {
         popUp &&
         <Popup />
       }
-      <h1 className="text-2xl font-bold text-sky-600  text-center ">Contact Me</h1>
-      <h1 className="text-lg   text-gray-300 text-center ">
-        Your word matters!
-      </h1>
+      <div className="relative w-fit mx-auto text-center z-10">
+        <h4 className="glow-underline text-4xl sm:text-5xl md:text-6xl font-bold text-textPrimary mb-2">
+          Reach <span className="text-accentCyan"> Out
+          </span>
+        </h4>
+        <h5 className="text-sm md:text-base uppercase tracking-widest font-light mb-2 text-textMuted">
+          I’m just one click away.
+        </h5>
+        {/* Decorative line */}
+        <div className="w-36 mx-auto h-px bg-gradient-to-r from-accentCyan to-transparent mb-12" />
+      </div>
       <div className="p-5 max-w-[1440px] mx-auto flex max-md:flex-col justify-between rounded-md">
-        <div className="w-full md:px-12  lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
+        {/* <div className="w-full md:px-12  lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
 
           <form ref={form}  >
 
@@ -63,7 +72,7 @@ const ContactME = () => {
                 className="form-input "
               />
             </div>
-       
+
             <div className="flex w-full justify-end">
               {
                 loader && !isSent &&
@@ -76,7 +85,7 @@ const ContactME = () => {
               {
                 !loader && isSent &&
                 <button
-                  className=" hero-btn animate-bounce text-green-500 shadow-md shadow-green-300 my-6 "
+                  className="btn-primary animate-bounce text-green-500 shadow-md shadow-green-300 my-6 "
                 >
                   Message Sent
                 </button>
@@ -87,7 +96,7 @@ const ContactME = () => {
                 <button
                   type='button'
                   onClick={(e) => sendEmail(e)}
-                  className=" hero-btn my-6 "
+                  className="btn-primary my-6 "
                 >
                   Send Message
                 </button>
@@ -97,7 +106,56 @@ const ContactME = () => {
             </div>
           </form>
 
+        </div> */}
+        <div className="w-full max-w-md mx-auto ">
+          <form ref={form} className="space-y-8">
+            <div className="form-input">
+              <input type="text" id="name" name='from_name' placeholder=" " required="" />
+              <label htmlFor="name">Name</label>
+              <div className="focus-underline" />
+            </div>
+            <div className="form-input">
+              <input type="email" id="email" name='user_email' placeholder=" " required="" />
+              <label htmlFor="email">Email</label>
+              <div className="focus-underline" />
+            </div>
+            <div className="form-input">
+              <textarea id="message" placeholder=" " required="" name='message' defaultValue={""} />
+              <label htmlFor="message">Message</label>
+              <div className="focus-underline" />
+            </div>
+            {
+              loader && !isSent &&
+              <button
+                className=" hero-btn animate-bounce text-yellow-500 shadow-md shadow-yellow-200 my-6 "
+              >
+                Sending...
+              </button>
+            }
+            {
+              !loader && isSent &&
+              <button
+                className="btn-primary animate-bounce text-green-500 shadow-md shadow-green-300 my-6 "
+              >
+                Message Sent
+              </button>
+
+            }
+            {
+              !loader && !isSent &&
+              <button
+                type='button'
+                onClick={(e) => sendEmail(e)}
+                className="btn-primary my-6 "
+              >
+                Send Message
+              </button>
+
+            }
+          </form>
         </div>
+                  {/* <Lottie  loop={true} animationData={messengerAnimation} /> */}
+
       </div>
     </div>
   )
