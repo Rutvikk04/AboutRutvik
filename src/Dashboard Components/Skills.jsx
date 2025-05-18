@@ -99,11 +99,11 @@ const Skills = () => {
 
       <div className="m-auto md:space-x-5  max-w-[1440px]  max-sm:flex-col  justify-between px-6 max-sm:px-2">
         <div className=" text-white flex flex-wrap gap-4 justify-center w-full my-8">
-          <button onClick={() => handleSKillFilter("all")} className={`nav-link  hover:text-white px-1 py-2 text-sm font-medium ${currentActiveFilter == "all" ? "active text-white" : "text-gray-400"}`}>All</button>
-          <button onClick={() => handleSKillFilter("fe")} className={`nav-link  hover:text-white px-1 py-2 text-sm font-medium ${currentActiveFilter == "fe" ? "active text-white" : "text-gray-400"}`}>Frontend</button>
-          <button onClick={() => handleSKillFilter("be")} className={`nav-link  hover:text-white px-1 py-2 text-sm font-medium ${currentActiveFilter == "be" ? "active text-white" : "text-gray-400"}`}>Backend</button>
-          <button onClick={() => handleSKillFilter("db")} className={`nav-link  hover:text-white px-1 py-2 text-sm font-medium ${currentActiveFilter == "db" ? "active text-white" : "text-gray-400"}`}>Database</button>
-          <button onClick={() => handleSKillFilter("other")} className={`nav-link  hover:text-whit px-1 py-2 text-sm font-medium ${currentActiveFilter == "other" ? "active text-white" : "text-gray-400"}`}>Others</button>
+          <button onClick={() => handleSKillFilter("all")} className={`nav-link  hover:text-accentCyan px-1 py-2 text-sm font-medium ${currentActiveFilter == "all" ? "active text-accentCyan" : "text-gray-400"}`}>All</button>
+          <button onClick={() => handleSKillFilter("fe")} className={`nav-link  hover:text-accentCyan px-1 py-2 text-sm font-medium ${currentActiveFilter == "fe" ? "active text-accentCyan" : "text-gray-400"}`}>Frontend</button>
+          <button onClick={() => handleSKillFilter("be")} className={`nav-link  hover:text-accentCyan px-1 py-2 text-sm font-medium ${currentActiveFilter == "be" ? "active text-accentCyan" : "text-gray-400"}`}>Backend</button>
+          <button onClick={() => handleSKillFilter("db")} className={`nav-link  hover:text-accentCyan px-1 py-2 text-sm font-medium ${currentActiveFilter == "db" ? "active text-accentCyan" : "text-gray-400"}`}>Database</button>
+          <button onClick={() => handleSKillFilter("other")} className={`nav-link  hover:text-accentCyan px-1 py-2 text-sm font-medium ${currentActiveFilter == "other" ? "active text-accentCyan" : "text-gray-400"}`}>Others</button>
         </div>
         <div className="flex flex-wrap gap-4 justify-center">
           {skillFilter?.map((x, index) => {
@@ -117,7 +117,7 @@ const Skills = () => {
                   rotateX,
                   transformStyle: "preserve-3d",
                 }}
-                className="relative h-36 shadow-md group shadow-blue-500 w-36 max-sm:w-28 max-sm:h-28 grid place-content-center rounded-md bg-gray-800  "
+                className="relative h-36 shadow-sm group shadow-accentCyan w-36 max-sm:w-28 max-sm:h-28 grid place-content-center rounded-md bg-bg "
               >
                 <div
                   style={{
@@ -126,11 +126,11 @@ const Skills = () => {
                   className="lg:preserve-3d text-center  "
                 >
                   <img
-                    className="shadow-md shadow-white mb-2 object-cover group-hover:shadow-blue-500 preserve-3d w-20 h-20 max-sm:w-12 max-sm:h-12 rounded-full mx-auto object-center"
+                    className="shadow-md shadow-white mb-2 object-cover group-hover:shadow-accentCyan preserve-3d w-20 h-20 max-sm:w-12 max-sm:h-12 rounded-full mx-auto object-center"
                     alt="skill_logo"
                     src={x.img}
                   />
-                  <span className="text-md group-hover:text-blue-500 text-gray-300 font-medium ">
+                  <span className="text-md group-hover:text-accentCyan text-gray-300 font-medium ">
                     {x.title}
                   </span>
                 </div>

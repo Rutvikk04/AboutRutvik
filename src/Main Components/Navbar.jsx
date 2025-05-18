@@ -15,7 +15,7 @@ const Navbar = () => {
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <div className="flex items-center">
-                <span className="text-2xl text-sky-500 font-pacifico ">Rutvik</span>
+                <span className="text-2xl text-accentCyan font-pacifico ">Rutvik</span>
               </div>
             </div>
             {/* Desktop Menu */}
@@ -26,7 +26,7 @@ const Navbar = () => {
                     <a
                       href={`#${menu}`}
                       onClick={()=>setActiveLink(menu)}
-                      className={`nav-link  hover:text-blue-600 px-1 py-2 text-sm font-medium ${menu===activeLink ? "active text-blue-600" :"text-gray-500"}`}
+                      className={`nav-link  hover:text-accentCyan px-1 py-2 text-sm font-medium ${menu===activeLink ? "active text-accentCyan" :"text-gray-500"}`}
                     >
                       
                     {menu}
@@ -42,7 +42,7 @@ const Navbar = () => {
                 <button
                   id="mobile-menu-button"
                   onClick={() => setMenuSidebar(prev => !prev)}
-                  className="text-gray-700 hover:text-blue-600 focus:outline-none"
+                  className="text-gray-400 hover:text-accentCyan focus:outline-none"
                 >
                   {
                     menuSidebar ? <X /> :
@@ -57,7 +57,7 @@ const Navbar = () => {
           menuSidebar &&
           <div
             id="mobile-menu"
-            className=" md:hidden  bg-white border-t border-blue-50"
+            className=" md:hidden  border-t border-blue-50"
           >
             <div className="px-2 pt-2 pb-3 flex flex-col space-y-1 sm:px-3">
                   {
@@ -65,9 +65,8 @@ const Navbar = () => {
                     <a
                       href={`#${menu}`}
                       onClick={()=>setActiveLink(menu)}
-                      className={`nav-link text-gray-700 hover:text-blue-600 px-1 py-2 text-sm font-medium ${menu===activeLink ? "active" :""}`}
+                      className={`nav-link text-gray-400 w-fit hover:text-accentCyan px-1 py-2 text-sm font-medium ${menu===activeLink ? "active" :""}`}
                     >
-                      
                     {menu}
                     </a>
 
