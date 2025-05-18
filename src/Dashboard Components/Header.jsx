@@ -44,7 +44,7 @@ const Header = () => {
               opacity: isInView ? 1 : 0,
               transition: "all 0.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
             }}
-            className="text-6xl font-pacifico header-hero max-md:text-5xl text-center text-sky-500">
+            className="text-6xl font-pacifico header-hero max-md:text-5xl text-center text-accentCyan">
             I Am Rutvik..
           </h1>
           <h1
@@ -68,31 +68,6 @@ const Header = () => {
           With over <b className="text-white underline">2.5 years</b> of hands-on experience delivering high-impact projects—both freelance and professional—I'm a  <b className="text-white underline">MERN Stack/Next JS developer</b>  who turns ideas into scalable, efficient solutions.
           If you're looking for a developer who blends skill with dedication, your search ends here.
         </p>
-        {/* <div className="flex justify-center space-x-5 my-3 max-md:mx-2 max-md:text-center">
-          <a
-            href={Resume}
-            style={{
-              opacity: isInView ? 1 : 0,
-              transform: isInView ? "none" : "translateX(-50%)",
-              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) "
-            }}
-            download="Rutvik_MERN_Resume"
-            className="hero-btn"
-          >
-            Download CV
-          </a>
-          <a
-            style={{
-              opacity: isInView ? 1 : 0,
-              transform: isInView ? "none" : "translateX(50%)",
-              transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) "
-            }}
-            className=" hero-btn cursor-pointer"
-            href="#Contact"
-          >
-            Contact Me
-          </a>
-        </div> */}
         <div className="flex max-sm:flex-col flex-row gap-3 justify-center  my-3 max-md:mx-2 max-md:text-center">
           {/* Primary Button */}
           <a

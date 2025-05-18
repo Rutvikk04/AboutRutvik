@@ -1,12 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y,Autoplay } from "swiper/modules";
-import easyPDF from "../Assets/Project Images/EasyPDF.png"
-import MineSweeperGame from "../Assets/Project Images/StakeGame.png"
-import chatApp from "../Assets/Project Images/chatApp.png"
-import portfolio from "../Assets/Project Images/portfolio.png"
-import shopeasy from "../Assets/Project Images/shopeasy.png"
-import bmi from "../Assets/Project Images/bmi_calculator.png"
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
+import easyPDF from "../Assets/ProjectImages/EasyPDF.png"
+import MineSweeperGame from "../Assets/ProjectImages/StakeGame.png"
+import chatApp from "../Assets/ProjectImages/chatApp.png"
+import portfolio from "../Assets/ProjectImages/portfolio.png"
+import shopeasy from "../Assets/ProjectImages/shopeasy.png"
+import bmi from "../Assets/ProjectImages/bmi_calculator.png"
+import hos from "../Assets/ProjectImages/hospital_management.png"
 const Projects = () => {
   const myProjects = [
     {
@@ -18,6 +19,26 @@ const Projects = () => {
       description: `<p>
     ShopEasy.ai is an ai based e-commerce platform where user can make it's own
     store and can easily maintain it using admin panel.          
+    
+  </p>`,
+      link: "http://ShopEasy.AI",
+    },
+    {
+      title: "Hospital Management",
+      organization: "Freelance client",
+      image: hos,
+      frameworks: ["MERN stack", "TailwindCSS", "NextJS"],
+      thirdParty: [ ],
+      description: `<p>
+    A hospital management web app enabling doctors to efficiently track patients, manage appointments, and streamline healthcare operations—all in one secure, responsive, and user-friendly dashboard.
+
+
+
+
+
+
+
+.          
     
   </p>`,
       link: "http://ShopEasy.AI",
@@ -90,16 +111,16 @@ This is the tool where one can create and download PDF online . We provide you a
       className="h-full py-16 space-y-4 w-full bg-gradient-to-b from-black to-gray-900 py- px-5 max-sm:px-2"
     >
       <div>
-     <div className="relative w-fit mx-auto text-center z-10">
-        <h4 className="glow-underline text-4xl sm:text-5xl md:text-6xl font-bold text-textPrimary mb-2">
-           <span className="text-accentCyan">Projects</span>
-        </h4>
-        <h5 className="text-sm md:text-base uppercase tracking-widest font-light mb-2 text-textMuted">
-         Explore My Craft in Action.
-        </h5>
-        {/* Decorative line */}
-        <div className="w-36 mx-auto h-px bg-gradient-to-r from-accentCyan to-transparent mb-12" />
-      </div>
+        <div className="relative w-fit mx-auto text-center z-10">
+          <h4 className="glow-underline text-4xl sm:text-5xl md:text-6xl font-bold text-textPrimary mb-2">
+            <span className="text-accentCyan">Projects</span>
+          </h4>
+          <h5 className="text-sm md:text-base uppercase tracking-widest font-light mb-2 text-textMuted">
+            Explore My Craft in Action.
+          </h5>
+          {/* Decorative line */}
+          <div className="w-36 mx-auto h-px bg-gradient-to-r from-accentCyan to-transparent mb-12" />
+        </div>
       </div>
       <div className="flex py-6 max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2 my-2">
         <Swiper
@@ -122,8 +143,8 @@ This is the tool where one can create and download PDF online . We provide you a
           }}
           navigation
           autoplay={{
-            delay:1500,
-            disableOnInteraction:true
+            delay: 1500,
+            disableOnInteraction: true
           }}
         >
 
@@ -159,7 +180,7 @@ This is the tool where one can create and download PDF online . We provide you a
                       <div className="flex flex-wrap gap-2">
                         {
                           x.frameworks.map((y, index) => {
-                            return <span className="tech-badge bg-gray-800/50 text-gray-200 px-3 py-1 rounded-full text-xs">
+                            return <span key={index} className="tech-badge bg-gray-800/50 text-gray-200 px-3 py-1 rounded-full text-xs">
                               {y}
                             </span>
                           })
@@ -174,7 +195,7 @@ This is the tool where one can create and download PDF online . We provide you a
                         </h3>
                         <div className="flex flex-wrap gap-2">
                           {x.thirdParty.map((z, index) => {
-                            return <span className="tech-badge bg-gray-800/50 text-gray-200 px-3 py-1 rounded-full text-xs">
+                            return <span key={index} className="tech-badge bg-gray-800/50 text-gray-200 px-3 py-1 rounded-full text-xs">
                               {z}
                             </span>
                           })}

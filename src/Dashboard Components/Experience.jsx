@@ -150,7 +150,7 @@ const Experience = () => {
                 <ul className="ml-3 text-gray-300">
                   {x.responsibilities.map((y, index) => {
                     return (
-                      <div className="flex space-x-2">
+                      <div key={index} className="flex space-x-2">
                         <ArrowRight className="w-4" />
                         <li>{y}</li>
                       </div>

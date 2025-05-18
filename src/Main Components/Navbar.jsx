@@ -22,8 +22,9 @@ const Navbar = () => {
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-8">
                 {
-                  menuItems.map(menu => (
+                  menuItems.map((menu,index) => (
                     <a
+                    key={index}
                       href={`#${menu}`}
                       onClick={()=>setActiveLink(menu)}
                       className={`nav-link  hover:text-accentCyan px-1 py-2 text-sm font-medium ${menu===activeLink ? "active text-accentCyan" :"text-gray-500"}`}

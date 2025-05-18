@@ -109,6 +109,7 @@ const Skills = () => {
           {skillFilter?.map((x, index) => {
             return (
               <motion.div
+              key={index}
                 onMouseEnter={() => setHoverDiv(index)}
                 onMouseMove={(e) => { if (hoverDiv === index) handleMouseMove(e) }}
                 onMouseLeave={(e) => { if (hoverDiv === index) handleMouseLeave(e) }}
