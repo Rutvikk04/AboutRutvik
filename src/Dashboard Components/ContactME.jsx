@@ -50,6 +50,58 @@ const ContactME = () => {
         <div className="w-36 mx-auto h-px bg-gradient-to-r from-accentCyan to-transparent mb-12" />
       </div>
       <div className="p-5 max-w-[1440px] mx-auto flex max-md:flex-col justify-between rounded-md">
+        <div className='flex flex-col sm:flex-row gap-5 mx-auto'>
+          <div className="w-full max-w-md  mx-auto ">
+            <form ref={form} className="space-y-8">
+              <div className="form-input">
+                <input type="text" id="name" name='from_name' placeholder=" " required="" />
+                <label htmlFor="name">Name</label>
+                <div className="focus-underline" />
+              </div>
+              <div className="form-input">
+                <input type="email" id="email" name='user_email' placeholder=" " required="" />
+                <label htmlFor="email">Email</label>
+                <div className="focus-underline" />
+              </div>
+              <div className="form-input">
+                <textarea id="message" placeholder=" " required="" name='message' defaultValue={""} />
+                <label htmlFor="message">Message</label>
+                <div className="focus-underline" />
+              </div>
+              {
+                loader && !isSent &&
+                <button
+                  className=" hero-btn animate-bounce text-yellow-500 shadow-md shadow-yellow-200 my-6 "
+                >
+                  Sending...
+                </button>
+              }
+              {
+                !loader && isSent &&
+                <button
+                  className="btn-primary animate-bounce text-green-500 shadow-md shadow-green-300 my-6 "
+                >
+                  Message Sent
+                </button>
+
+              }
+              {
+                !loader && !isSent &&
+                <button
+                  type='button'
+                  onClick={(e) => sendEmail(e)}
+                  className="btn-primary my-6 "
+                >
+                  Send Message
+                </button>
+
+              }
+            </form>
+          </div>
+          <div className='w-full max-w-[600px]'>
+            <Lottie style={{ width: "100%" }} loop={true} animationData={messengerAnimation} />
+          </div>
+        </div>
         {/* <div className="w-full md:px-12  lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
 
           <form ref={form}  >
@@ -107,54 +159,7 @@ const ContactME = () => {
           </form>
 
         </div> */}
-        <div className="w-full max-w-md mx-auto ">
-          <form ref={form} className="space-y-8">
-            <div className="form-input">
-              <input type="text" id="name" name='from_name' placeholder=" " required="" />
-              <label htmlFor="name">Name</label>
-              <div className="focus-underline" />
-            </div>
-            <div className="form-input">
-              <input type="email" id="email" name='user_email' placeholder=" " required="" />
-              <label htmlFor="email">Email</label>
-              <div className="focus-underline" />
-            </div>
-            <div className="form-input">
-              <textarea id="message" placeholder=" " required="" name='message' defaultValue={""} />
-              <label htmlFor="message">Message</label>
-              <div className="focus-underline" />
-            </div>
-            {
-              loader && !isSent &&
-              <button
-                className=" hero-btn animate-bounce text-yellow-500 shadow-md shadow-yellow-200 my-6 "
-              >
-                Sending...
-              </button>
-            }
-            {
-              !loader && isSent &&
-              <button
-                className="btn-primary animate-bounce text-green-500 shadow-md shadow-green-300 my-6 "
-              >
-                Message Sent
-              </button>
 
-            }
-            {
-              !loader && !isSent &&
-              <button
-                type='button'
-                onClick={(e) => sendEmail(e)}
-                className="btn-primary my-6 "
-              >
-                Send Message
-              </button>
-
-            }
-          </form>
-        </div>
-                  {/* <Lottie  loop={true} animationData={messengerAnimation} /> */}
 
       </div>
     </div>
