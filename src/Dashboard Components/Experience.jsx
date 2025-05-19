@@ -124,26 +124,26 @@ const Experience = () => {
                   transform: "translateZ(75px)",
                   transformStyle: "preserve-3d",
                 }}
-                className="absolute inset-4 p-2 grid place-content-center rounded-xl bg-gray-900 shadow-blue-500 shadow-lg"
+                className="absolute inset-4 p-2 grid place-content-center rounded-xl bg-bg shadow-accentCyan shadow-lg"
               >
-                <h1 className="text-center text-sky-500 text-2xl">
+                <h1 className="text-center text-accentCyan text-2xl">
                   {x.org_name}
                 </h1>
                 <h1 className="text-center text-gray-400 text-sm mb-2">
                   {x.date}
                 </h1>
                 <div className="flex flex-nowrap justify-between max-md:flex-col">
-                  <h1 className="text-sky-600 font-medium">
+                  <h1 className="text-accentCyan font-medium">
                     Role:{" "}
                     <span className=" text-gray-200 whitespace-nowrap">
                       {x.Role}
                     </span>
                   </h1>
-                  <h1 className="text-sky-600 font-medium">
+                  <h1 className="text-accentCyan font-medium">
                     Team Size: <span className=" text-gray-200">{x.team}</span>
                   </h1>
                 </div>
-                <h1 className="text-sky-600 font-medium mt-2">
+                <h1 className="text-accentCyan font-medium mt-2">
                   Key-Responsibilities:
                 </h1>
 

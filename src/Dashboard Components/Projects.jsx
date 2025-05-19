@@ -153,10 +153,10 @@ This is the tool where one can create and download PDF online . We provide you a
             let { description } = x;
             return (
               <SwiperSlide key={index}>
-                <div className="project-card bg-gray-800 rounded-2xl shadow-2xl overflow-hidden border border-[#1E293B] mx-2 h-[530px] max-sm:h-auto">
+                <div className="project-card  rounded-2xl shadow-2xl overflow-hidden border border-[#1E293B] mx-2 h-[530px] max-sm:h-auto">
                   {/* Project Image */}
                   <div className="project-image p-4">
-                    <div className="rounded-xl overflow-hidden border border-cyan-500/30 shadow-lg">
+                    <div className="rounded-xl overflow-hidden border border-cyan-500/30 shadow-sm">
                       <img
                         src={x.image}
                         alt="ShopEasy.AI Project Screenshot"

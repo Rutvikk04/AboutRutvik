@@ -259,7 +259,7 @@ body {
 /*  project card */
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.15);
+  box-shadow: 0 2px 15px var(--color-accent-cyan) inset;
 }
 
 .project-title {
