@@ -98,7 +98,7 @@ const ContactME = () => {
               }
             </form>
           </div>
-          <div className='w-full max-w-[600px]'>
+          <div className='w-[300px] sm:w-[600px]'>
             <Lottie style={{ width: "100%" }} loop={true} animationData={messengerAnimation} />
           </div>
         </div>
