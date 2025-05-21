@@ -10,6 +10,7 @@ import bootstrap from "../Assets/bootstrap.png";
 import sql from "../Assets/sql.png";
 import git from "../Assets/git.png";
 import NextJs from "../Assets/NextJS.png";
+import express from "../Assets/express.png";
 
 import {
   motion,
@@ -27,13 +28,14 @@ const Skills = () => {
     { title: "HTML5", img: HTML5, type: "fe" },
     { title: "CSS3", img: css3, type: "fe" },
     { title: "JavaScript", img: JavaScript, type: "both" },
+    { title: "TailwindCSS", img: tailwind, type: "fe" },
+    { title: "Bootstrap", img: bootstrap, type: "fe" },
     { title: "React JS", img: reactLogo, type: "fe" },
     { title: "Next JS", img: NextJs, type: "both" },
     { title: "Node JS", img: node, type: "be" },
+    { title: "Express JS", img: express, type: "be" },
     { title: "MongoDB", img: mongodb, type: "db" },
     { title: "MySQL", img: sql, type: "db" },
-    { title: "TailwindCSS", img: tailwind, type: "fe" },
-    { title: "Bootstrap", img: bootstrap, type: "fe" },
     { title: "Git & Github", img: git, type: "other" },
   ];
 
