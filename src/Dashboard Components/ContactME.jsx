@@ -89,7 +89,8 @@ const ContactME = () => {
                 !loader && !isSent &&
                 <button
                   type='button'
-                  onClick={(e) => sendEmail(e)}
+                  onClick={(e) => sendEmail(e)
+                  }
                   className="btn-primary my-6 "
                 >
                   Send Message
@@ -102,65 +103,6 @@ const ContactME = () => {
             <Lottie style={{ width: "100%" }} loop={true} animationData={messengerAnimation} />
           </div>
         </div>
-        {/* <div className="w-full md:px-12  lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
-
-          <form ref={form}  >
-
-            <div className="grid grid-cols-1 gap-5 z-50  mt-5">
-              <input
-                className="form-input"
-                type="text"
-                name='from_name'
-                placeholder="Name*"
-              />
-              <input
-                className="form-input"
-                name='user_email'
-                placeholder="Email*"
-              />
-              <textarea
-                placeholder="Message*"
-                name='message'
-                className="form-input "
-              />
-            </div>
-
-            <div className="flex w-full justify-end">
-              {
-                loader && !isSent &&
-                <button
-                  className=" hero-btn animate-bounce text-yellow-500 shadow-md shadow-yellow-200 my-6 "
-                >
-                  Sending...
-                </button>
-              }
-              {
-                !loader && isSent &&
-                <button
-                  className="btn-primary animate-bounce text-green-500 shadow-md shadow-green-300 my-6 "
-                >
-                  Message Sent
-                </button>
-
-              }
-              {
-                !loader && !isSent &&
-                <button
-                  type='button'
-                  onClick={(e) => sendEmail(e)}
-                  className="btn-primary my-6 "
-                >
-                  Send Message
-                </button>
-
-              }
-
-            </div>
-          </form>
-
-        </div> */}
-
-
       </div>
     </div>
   )
