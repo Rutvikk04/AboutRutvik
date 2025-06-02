@@ -28,17 +28,9 @@ const Projects = () => {
       organization: "Freelance client",
       image: hos,
       frameworks: ["MERN stack", "TailwindCSS", "NextJS"],
-      thirdParty: [ ],
+      thirdParty: [],
       description: `<p>
-    A hospital management web app enabling doctors to efficiently track patients, manage appointments, and streamline healthcare operations—all in one secure, responsive, and user-friendly dashboard.
-
-
-
-
-
-
-
-.          
+    A hospital management web app enabling doctors to efficiently track patients, manage appointments, and streamline healthcare operations—all in one secure, responsive, and user-friendly dashboard.          
     
   </p>`,
       link: "http://ShopEasy.AI",
@@ -54,7 +46,7 @@ const Projects = () => {
   It is my first game.Enjoy!!       
     
   </p>`,
-      link: "https://rutvikk04.github.io/minesweeper_game/",
+      link: "https://minesweeper-five-lime.vercel.app/",
     },
     {
       title: "Easy PDF",
@@ -66,18 +58,17 @@ const Projects = () => {
 This is the tool where one can create and download PDF online . We provide you a Text editor. Fill data and generate and get your pdf in seconds.  
     
   </p>`,
-      link: "https://rutvikk04.github.io/Easy-PDF/",
+      link: "https://webtoolslab.in/easy-pdf",
     },
     {
       title: "Live ChatApp",
       image: chatApp,
       organization: "Personal Project",
-      frameworks: ["Node JS", "React JS", "ExpressJS", "MongoDB"],
+      frameworks: ["MERN stack", "TailwindCSS"],
       thirdParty: ["Socket.io"],
       description: `<p>
      It's live chat app with One to One personal As well as group chat features.User can login and enjoy the chat application..
-  </p>`,
-      link: "not_live",
+  </p>`
     },
     {
       title: "BMI calculator",
@@ -101,7 +92,7 @@ This is the tool where one can create and download PDF online . We provide you a
       description: `<p>
     This is about my portfolio where you can explore about me, my skills,my achivemets And lot of.<br/><br/>Frankly, This is the Site where you are already reading this stuff.
   </p>`,
-      link: "Rutvik Portfolio",
+      link: "#",
     },
   ];
 
@@ -153,7 +144,7 @@ This is the tool where one can create and download PDF online . We provide you a
             let { description } = x;
             return (
               <SwiperSlide key={index}>
-                <div className="project-card  rounded-2xl shadow-2xl overflow-hidden border border-[#1E293B] mx-2 h-[530px] max-sm:h-auto">
+                <div className="project-card relative rounded-2xl shadow-2xl overflow-hidden border border-[#1E293B] mx-2 h-[530px] max-sm:h-auto">
                   {/* Project Image */}
                   <div className="project-image p-4">
                     <div className="rounded-xl overflow-hidden border border-cyan-500/30 shadow-sm">
@@ -167,9 +158,16 @@ This is the tool where one can create and download PDF online . We provide you a
                   {/* Project Content */}
                   <div className="p-6 pt-0">
                     {/* Project Title */}
-                    <h4 className="project-title text-2xl font-bold text-cyan-400 mb-3">
-                      {x.title}
-                    </h4>
+                    {
+                      x.link ?
+                        <a href={x.link} target="__blanks" className="project-title text-2xl font-bold text-cyan-400 mb-3">
+                          {x.title}
+                        </a> :
+
+                        <h4 className="project-title text-2xl font-bold text-cyan-400 mb-3">
+                          {x.title}
+                        </h4>
+                    }
                     {/* Project Description */}
                     <div className="text-gray-300 text-sm mb-5 leading-relaxed" dangerouslySetInnerHTML={{ __html: description }} />
                     {/* Technologies Section */}
