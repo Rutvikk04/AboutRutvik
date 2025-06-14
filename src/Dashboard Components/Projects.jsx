@@ -8,6 +8,7 @@ import portfolio from "../Assets/ProjectImages/portfolio.png"
 import shopeasy from "../Assets/ProjectImages/shopeasy.png"
 import bmi from "../Assets/ProjectImages/bmi_calculator.png"
 import hos from "../Assets/ProjectImages/hospital_management.png"
+import NewProduct from "./NewProduct";
 const Projects = () => {
   const myProjects = [
     {
@@ -113,6 +114,15 @@ This is the tool where one can create and download PDF online . We provide you a
           <div className="w-36 mx-auto h-px bg-gradient-to-r from-accentCyan to-transparent mb-12" />
         </div>
       </div>
+      <NewProduct />
+      <div className="flex justify-center">
+        <div className=" inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-green-500/20 rounded-full border border-cyan-400/30 backdrop-blur-sm">
+          <span className="text-sm font-medium text-cyan-300">
+            Other Projects
+          </span>
+          <div className="absolute inset-0 rounded-full border border-cyan-400/50 animate-pulse opacity-70" />
+        </div>
+        </div>
       <div className="flex py-6 max-w-[1440px] m-auto justify-around flex-wrap max-md:space-y-2 my-2">
         <Swiper
           // install Swiper modules
